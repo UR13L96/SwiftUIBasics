@@ -20,12 +20,20 @@ struct ContentView: View {
                 .bold()
             Spacer()
             HStack(alignment: .center, spacing: 8) {
-                Button(action: {}, label: {
+                Button(action: {}) {
                     Label("ALERT", systemImage: "exclamationmark.triangle.fill")
-                })
+                }
                 .padding(.all)
                 .foregroundColor(.white)
                 .background(Color.blue)
+                .cornerRadius(8)
+                
+                Button(action: {}) {
+                    Label("SELECT", systemImage: "folder.fill")
+                }
+                .padding(.all)
+                .foregroundColor(.white)
+                .background(Color.red)
                 .cornerRadius(8)
             }
         }.padding(.all)
