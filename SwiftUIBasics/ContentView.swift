@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isAlertVisible: Bool = false
+    var alert: Alert {
+        Alert(title: Text("ALERT"), message: Text("I'm an alert"), dismissButton: .default(Text("Confirm")))
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
             Text("SwiftUI Course")
@@ -20,16 +25,21 @@ struct ContentView: View {
                 .bold()
             Spacer()
             HStack(alignment: .center, spacing: 8) {
-                Button(action: {}) {
+                Button(action: {
+                    isAlertVisible.toggle()
+                }) {
                     Label("ALERT", systemImage: "exclamationmark.triangle.fill")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(8)
+                .alert(isPresented: $isAlertVisible, content: {
+                    alert
+                })
                 
                 Button(action: {}) {
-                    Label("SELECT", systemImage: "folder.fill")
+                    Label("ACTION SHEET", systemImage: "folder.fill")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
