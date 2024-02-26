@@ -13,6 +13,8 @@ struct ContentView: View {
         Alert(title: Text("ALERT"), message: Text("I'm an alert"), dismissButton: .default(Text("Confirm")))
     }
     
+    @State private var isConfirmationDialogVisible: Bool = false
+    
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
             Text("SwiftUI Course")
@@ -38,13 +40,25 @@ struct ContentView: View {
                     alert
                 })
                 
-                Button(action: {}) {
+                Button(action: {
+                    isConfirmationDialogVisible.toggle()
+                }) {
                     Label("ACTION SHEET", systemImage: "folder.fill")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
                 .background(Color.red)
                 .cornerRadius(8)
+                .confirmationDialog("MENU", isPresented: $isConfirmationDialogVisible) {
+                    Button("Galery", action: {})
+                    Button("Camera", action: {})
+                    Button(role: .cancel, action: {}) {
+                        Text("Cancel")
+                    }
+                } message: {
+                    Text("Select an option")
+                }
+
             }
         }.padding(.all)
     }
