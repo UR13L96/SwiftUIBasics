@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAlertVisible: Bool = false
     var alert: Alert {
-        Alert(title: Text("ALERT"), message: Text("I'm an alert"), dismissButton: .default(Text("Confirm")))
+        Alert(title: Text("ALERT"), message: Text("I'm an alert"), dismissButton: .default(Text("Confirm"), action: {
+            print("My first alert in SwiftUI")
+        }))
     }
     
     @State private var isConfirmationDialogVisible: Bool = false
@@ -43,15 +45,19 @@ struct ContentView: View {
                 Button(action: {
                     isConfirmationDialogVisible.toggle()
                 }) {
-                    Label("ACTION SHEET", systemImage: "folder.fill")
+                    Label("CONFIRMATION DIALOG", systemImage: "folder.fill")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
                 .background(Color.red)
                 .cornerRadius(8)
                 .confirmationDialog("MENU", isPresented: $isConfirmationDialogVisible) {
-                    Button("Galery", action: {})
-                    Button("Camera", action: {})
+                    Button("Galery", action: {
+                        print("Galery selected")
+                    })
+                    Button("Camera", action: {
+                        print("Camera selected")
+                    })
                     Button(role: .cancel, action: {}) {
                         Text("Cancel")
                     }
