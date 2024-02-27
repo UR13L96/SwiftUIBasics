@@ -28,6 +28,12 @@ struct ContentView: View {
                 .foregroundColor(.green)
                 .bold()
             Spacer()
+            Image("ocarina")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(16)
+                .clipShape(.circle)
+            Spacer()
             HStack(alignment: .center, spacing: 8) {
                 Button(action: {
                     isAlertVisible.toggle()
