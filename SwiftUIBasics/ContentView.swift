@@ -9,13 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isAlertVisible: Bool = false
-    var alert: Alert {
-        Alert(title: Text("ALERT"), message: Text("I'm an alert"), dismissButton: .default(Text("Confirm"), action: {
-            print("My first alert in SwiftUI")
-        }))
-    }
-    
     @State private var isConfirmationDialogVisible: Bool = false
+    @State private var name: String = "Isaac"
     
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
@@ -23,7 +18,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .underline()
-            Text("Welcome to the course")
+            Text("Welcome to the course \(name)")
                 .font(.subheadline)
                 .foregroundColor(.green)
                 .bold()
@@ -44,9 +39,12 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(8)
-                .alert(isPresented: $isAlertVisible, content: {
-                    alert
-                })
+                .alert("ALERT", isPresented: $isAlertVisible) {
+                    TextField("Name", text: $name)
+                    Button("Confirm") { }
+                } message: {
+                    Text("I prefer to give you a personalized greeting")
+                }
                 
                 Button(action: {
                     isConfirmationDialogVisible.toggle()
