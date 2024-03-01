@@ -12,6 +12,17 @@ struct ContentView: View {
     @State private var isConfirmationDialogVisible: Bool = false
     @State private var name: String = "Isaac"
     
+    @State private var songs: [Song] = []
+    
+    private func addSong() {
+        songs.append(Song(
+            name: "Snow (Hey Oh)",
+            artist: "Red Hot Chili Peppers",
+            albumImage: "stadium.arcadium",
+            isFavorite: true
+        ))
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
             Text("SwiftUI Course")
@@ -23,11 +34,11 @@ struct ContentView: View {
                 .foregroundColor(.green)
                 .bold()
             Spacer()
-            Image("ocarina")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(16)
-                .clipShape(.circle)
+            List {
+                ForEach(songs) { song in
+                    Text(song.name)
+                }
+            }
             Spacer()
             HStack(alignment: .center, spacing: 8) {
                 Button(action: {
@@ -47,27 +58,27 @@ struct ContentView: View {
                 }
                 
                 Button(action: {
-                    isConfirmationDialogVisible.toggle()
+                    addSong()
                 }) {
-                    Label("CONFIRMATION DIALOG", systemImage: "folder.fill")
+                    Label("ADD SONG", systemImage: "music.note")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
                 .background(Color.red)
                 .cornerRadius(8)
-                .confirmationDialog("MENU", isPresented: $isConfirmationDialogVisible) {
-                    Button("Galery", action: {
-                        print("Galery selected")
-                    })
-                    Button("Camera", action: {
-                        print("Camera selected")
-                    })
-                    Button(role: .cancel, action: {}) {
-                        Text("Cancel")
-                    }
-                } message: {
-                    Text("Select an option")
-                }
+//                .confirmationDialog("MENU", isPresented: $isConfirmationDialogVisible) {
+//                    Button("Galery", action: {
+//                        print("Galery selected")
+//                    })
+//                    Button("Camera", action: {
+//                        print("Camera selected")
+//                    })
+//                    Button(role: .cancel, action: {}) {
+//                        Text("Cancel")
+//                    }
+//                } message: {
+//                    Text("Select an option")
+//                }
 
             }
         }.padding(.all)
