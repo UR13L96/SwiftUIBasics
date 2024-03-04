@@ -11,9 +11,10 @@ struct ContentView: View {
     @State private var isAlertVisible: Bool = false
     @State private var isConfirmationDialogVisible: Bool = false
     @State private var name: String = "Isaac"
-    
     @State private var songs: [Song] = []
     @State private var isFavoriteEnabled = false
+    
+    @ObservedObject var randomNumber = RandomNumber()
     
     private func addSongs() {
         songs.append(Song(
@@ -28,14 +29,19 @@ struct ContentView: View {
             albumImage: "primero.soy.mexicana",
             isFavorite: false
         ))
+        songs.append(Song(
+            name: "Se Que Te Amo",
+            artist: "Los Temerarios",
+            albumImage: "una.lagrima.no.basta",
+            isFavorite: true
+        ))
     }
     
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
-            Text("SwiftUI Course")
-                .font(.largeTitle)
-                .foregroundColor(.blue)
-                .underline()
+            Text("\(randomNumber.number)")
+                .font(.title)
+                .bold()
             Text("Welcome to the course \(name)")
                 .font(.subheadline)
                 .foregroundColor(.green)
