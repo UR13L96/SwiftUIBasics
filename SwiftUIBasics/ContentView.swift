@@ -13,13 +13,20 @@ struct ContentView: View {
     @State private var name: String = "Isaac"
     
     @State private var songs: [Song] = []
+    @State private var isFavoriteEnabled = false
     
-    private func addSong() {
+    private func addSongs() {
         songs.append(Song(
             name: "Snow (Hey Oh)",
             artist: "Red Hot Chili Peppers",
             albumImage: "stadium.arcadium",
             isFavorite: true
+        ))
+        songs.append(Song(
+            name: "La Tequilera",
+            artist: "Ángela Aguilar",
+            albumImage: "primero.soy.mexicana",
+            isFavorite: false
         ))
     }
     
@@ -35,8 +42,22 @@ struct ContentView: View {
                 .bold()
             Spacer()
             List {
-                ForEach(songs) { song in
-                    Text(song.name)
+                Toggle(isOn: $isFavoriteEnabled) {
+                    Text("Favoritos")
+                }
+                ForEach(songs.filter { $0.isFavorite == isFavoriteEnabled }) { song in
+                    HStack {
+                        Image(song.albumImage)
+                            .resizable()
+                            .frame(width: 64, height: 64)
+                        VStack(alignment: .leading) {
+                            Text(song.name)
+                                .font(.title3)
+                                .bold()
+                            Text(song.artist)
+                                .font(.subheadline)
+                        }
+                    }
                 }
             }
             Spacer()
@@ -58,9 +79,9 @@ struct ContentView: View {
                 }
                 
                 Button(action: {
-                    addSong()
+                    addSongs()
                 }) {
-                    Label("ADD SONG", systemImage: "music.note")
+                    Label("ADD SONGS", systemImage: "music.note")
                 }
                 .padding(.all)
                 .foregroundColor(.white)
