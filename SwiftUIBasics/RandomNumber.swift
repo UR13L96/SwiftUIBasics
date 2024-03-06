@@ -9,10 +9,19 @@ import Foundation
 
 class RandomNumber: ObservableObject {
     @Published var number: Int = 0
+    var timer: Timer?
     
     init() {
-        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
+        startTimer()
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.number = Int.random(in: 0 ..< 100)
         }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
     }
 }

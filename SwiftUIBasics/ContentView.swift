@@ -39,13 +39,37 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 32) {
-            Text("\(randomNumber.number)")
-                .font(.title)
-                .bold()
             Text("Welcome to the course \(name)")
                 .font(.subheadline)
                 .foregroundColor(.green)
                 .bold()
+            
+            Text("\(randomNumber.number)")
+                .font(.title)
+                .bold()
+            
+            HStack {
+                Button(action: {
+                    randomNumber.startTimer()
+                }) {
+                    Label("START", systemImage: "play.fill")
+                }
+                .padding(.all)
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(8)
+                
+                Button(action: {
+                    randomNumber.stopTimer()
+                }) {
+                    Label("STOP", systemImage: "stop.fill")
+                }
+                .padding(.all)
+                .foregroundColor(.white)
+                .background(Color.red)
+                .cornerRadius(8)
+            }
+            
             Spacer()
             List {
                 Toggle(isOn: $isFavoriteEnabled) {
