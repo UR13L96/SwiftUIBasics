@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct CounterView: View {
-    @ObservedObject var number = RandomNumber()
+    @Binding var counter: Int
     
     var body: some View {
         VStack {
             Button(action: {
-                number.counter += 1
+                counter += 1
             }) {
-                Label("\(number.counter)", systemImage: "play.fill")
+                Label("\(counter)", systemImage: "play.fill")
             }
             .padding(.all)
             .foregroundColor(.white)
-            .background(Color.green)
+            .background(Color.blue)
             .cornerRadius(8)
         }
     }
 }
 
 #Preview {
-    CounterView()
+    CounterView(counter: .constant(0))
 }

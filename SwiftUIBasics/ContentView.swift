@@ -130,7 +130,7 @@ struct ContentView: View {
 //                } message: {
 //                    Text("Select an option")
 //                }
-                CounterView()
+                CounterView(counter: $randomNumber.counter)
             }
         }.padding(.all)
     }
