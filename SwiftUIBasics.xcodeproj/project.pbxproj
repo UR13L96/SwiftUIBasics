@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B1112B96266D00BA62CA /* RandomNumber.swift */; };
 		A42D65482B8E448B00F996AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */; };
+		A43215612B9A16EB008F4124 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43215602B9A16EB008F4124 /* CounterView.swift */; };
 		A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */; };
 		A4E118672B87A9790008E2AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118662B87A9790008E2AB /* ContentView.swift */; };
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		A428B1112B96266D00BA62CA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A43215602B9A16EB008F4124 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A4E118612B87A9790008E2AB /* SwiftUIBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBasicsApp.swift; sourceTree = "<group>"; };
 		A4E118662B87A9790008E2AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				A4E1186A2B87A97A0008E2AB /* Preview Content */,
 				A4F2562C2B9236A200DC8791 /* Song.swift */,
 				A428B1112B96266D00BA62CA /* RandomNumber.swift */,
+				A43215602B9A16EB008F4124 /* CounterView.swift */,
 			);
 			path = SwiftUIBasics;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */,
+				A43215612B9A16EB008F4124 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

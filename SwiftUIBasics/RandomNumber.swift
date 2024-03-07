@@ -9,6 +9,8 @@ import Foundation
 
 class RandomNumber: ObservableObject {
     @Published var number: Int = 0
+    @Published var counter = 1
+    
     var timer: Timer?
     
     init() {
