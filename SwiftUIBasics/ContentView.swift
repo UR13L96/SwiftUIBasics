@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var songs: [Song] = []
     @State private var isFavoriteEnabled = false
     
-    @ObservedObject var randomNumber = RandomNumber()
+    @EnvironmentObject var randomNumber: RandomNumber
     
     private func addSongs() {
         songs.append(Song(
@@ -68,6 +68,7 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .background(Color.red)
                 .cornerRadius(8)
+                SecondCounterView()
             }
             
             Spacer()
@@ -130,7 +131,7 @@ struct ContentView: View {
 //                } message: {
 //                    Text("Select an option")
 //                }
-                CounterView(counter: $randomNumber.counter)
+                CounterView()
             }
         }.padding(.all)
     }

@@ -9,7 +9,7 @@ import Foundation
 
 class RandomNumber: ObservableObject {
     @Published var number: Int = 0
-    @Published var counter = 1
+    @Published var counter = 0
     
     var timer: Timer?
     
@@ -25,5 +25,9 @@ class RandomNumber: ObservableObject {
     
     func stopTimer() {
         timer?.invalidate()
+    }
+    
+    func restartCounter() {
+        counter = 0
     }
 }
