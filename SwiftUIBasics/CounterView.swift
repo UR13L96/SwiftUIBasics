@@ -21,6 +21,21 @@ struct CounterView: View {
             .foregroundColor(.white)
             .background(Color.blue)
             .cornerRadius(8)
+            .navigationTitle(Text("Counter view"))
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                HStack {
+                    NavigationLink(destination: SecondCounterView()) {
+                        Image(systemName: "plus.app.fill")
+                            .foregroundStyle(Color.red)
+                    }
+                    
+                    NavigationLink(destination: SecondCounterView()) {
+                        Image(systemName: "plus.app")
+                            .foregroundStyle(Color.red)
+                    }
+                }
+            }
         }
     }
 }
