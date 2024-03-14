@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CounterView: View {
     @EnvironmentObject var randomNumber: RandomNumber
+    @State private var isModalVisible = false
     
     var body: some View {
         VStack {
@@ -35,6 +36,12 @@ struct CounterView: View {
                             .foregroundStyle(Color.red)
                     }
                 }
+            }
+            
+            Button("Modal window") {
+                isModalVisible.toggle()
+            }.sheet(isPresented: $isModalVisible) {
+                SecondCounterView()
             }
         }
     }
