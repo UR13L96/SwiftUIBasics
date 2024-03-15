@@ -93,7 +93,7 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: CounterView()) {
+                NavigationLink(destination: CounterView(name: name)) {
                     HStack {
                         Image(systemName: "arrowshape.right.fill")
                             .foregroundStyle(Color.white)
@@ -145,7 +145,6 @@ struct ContentView: View {
     //                } message: {
     //                    Text("Select an option")
     //                }
-                    CounterView()
                 }
             }.padding(.all)
         }

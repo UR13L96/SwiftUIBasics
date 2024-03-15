@@ -11,8 +11,14 @@ struct CounterView: View {
     @EnvironmentObject var randomNumber: RandomNumber
     @State private var isModalVisible = false
     
+    var name: String
+    
     var body: some View {
         VStack {
+            Text("Welcome to the course \(name)")
+                .font(.subheadline)
+                .foregroundColor(.green)
+                .bold()
             Button(action: {
                 randomNumber.counter += 1
             }) {
@@ -48,5 +54,5 @@ struct CounterView: View {
 }
 
 #Preview {
-    CounterView()
+    CounterView(name: "Sofía")
 }
