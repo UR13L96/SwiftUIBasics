@@ -11,8 +11,9 @@ import SwiftUI
 struct SwiftUIBasicsApp: App {
     var body: some Scene {
         WindowGroup {
-            let randomNumber = RandomNumber()
-            ContentView().environmentObject(randomNumber)
+//            let randomNumber = RandomNumber()
+//            ContentView().environmentObject(randomNumber)
+            MenuView()
         }
     }
 }

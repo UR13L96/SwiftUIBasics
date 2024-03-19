@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B1112B96266D00BA62CA /* RandomNumber.swift */; };
 		A42D65482B8E448B00F996AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */; };
+		A4314D672BA9E99B008969CE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4314D662BA9E99B008969CE /* MenuView.swift */; };
+		A4314D692BA9EBA2008969CE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4314D682BA9EBA2008969CE /* Topic.swift */; };
 		A43215612B9A16EB008F4124 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43215602B9A16EB008F4124 /* CounterView.swift */; };
 		A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */; };
 		A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		A428B1112B96266D00BA62CA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4314D662BA9E99B008969CE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A4314D682BA9EBA2008969CE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A43215602B9A16EB008F4124 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
 		A4E118612B87A9790008E2AB /* SwiftUIBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,8 @@
 				A428B1112B96266D00BA62CA /* RandomNumber.swift */,
 				A43215602B9A16EB008F4124 /* CounterView.swift */,
 				A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */,
+				A4314D662BA9E99B008969CE /* MenuView.swift */,
+				A4314D682BA9EBA2008969CE /* Topic.swift */,
 			);
 			path = SwiftUIBasics;
 			sourceTree = "<group>";
@@ -153,10 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
 				A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */,
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */,
+				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
 				A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */,
 				A43215612B9A16EB008F4124 /* CounterView.swift in Sources */,
 			);
