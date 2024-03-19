@@ -13,10 +13,6 @@ class RandomNumber: ObservableObject {
     
     var timer: Timer?
     
-    init() {
-        startTimer()
-    }
-    
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.number = Int.random(in: 0 ..< 100)
