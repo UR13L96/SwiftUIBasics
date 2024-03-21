@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "wings-man-silhouette-angel-wings-abstract-flying-man-logo-design-vector.jpg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Copia de wings-man-silhouette-angel-wings-abstract-flying-man-logo-design-vector.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
