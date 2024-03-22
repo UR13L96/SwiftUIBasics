@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MenuView: View {
+    @State private var mode: ColorScheme = .dark
+    
     let topics: [Topic] = [
         Topic(name: "SwiftUI Basics"),
         Topic(name: "Dark Mode & User Defaults")
@@ -19,13 +21,13 @@ struct MenuView: View {
 //                NavigationLink(destination: ContentView().environmentObject(RandomNumber())) {
 //                    Text(topic.name)
 //                }
-                NavigationLink(destination: DarkModeView()) {
+                NavigationLink(destination: DarkModeView(mode: $mode)) {
                     Text(topic.name)
                 }
             }
             .navigationTitle("iOS 13 App Development")
             .navigationBarTitleDisplayMode(.inline)
-        }
+        }.environment(\.colorScheme, mode)
     }
 }
 

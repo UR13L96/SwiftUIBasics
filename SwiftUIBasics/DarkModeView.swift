@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DarkModeView: View {
-    @State private var mode: ColorScheme = .dark
+    @Binding var mode: ColorScheme
     
     var body: some View {
         NavigationStack {
@@ -31,10 +31,10 @@ struct DarkModeView: View {
                     mode = mode == .light ? .dark : .light
                 }
             }
-        }.environment(\.colorScheme, mode)
+        }
     }
 }
 
 #Preview {
-    DarkModeView()
+    DarkModeView(mode: .constant(.dark))
 }
