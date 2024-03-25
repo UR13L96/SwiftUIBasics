@@ -11,25 +11,24 @@ struct DarkModeView: View {
     @Binding var mode: ColorScheme
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 32) {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 320)
-                HStack {
-                    Image(systemName: "moon.circle")
-                        .font(.title)
-                    Text("Dark mode")
-                        .font(.title)
-                        .bold()
-                        .navigationTitle("User Defaults")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .foregroundStyle(Color("text.color", bundle: nil))
-                }
-                Button("Change mode") {
-                    mode = mode == .light ? .dark : .light
-                }
+        VStack(spacing: 32) {
+            Image("logo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 320)
+            HStack {
+                Image(systemName: "moon.circle")
+                    .font(.title)
+                Text("Dark mode")
+                    .font(.title)
+                    .bold()
+                    .navigationTitle("User Defaults")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .foregroundStyle(Color("text.color", bundle: nil))
+            }
+            Button("Change mode") {
+                mode = mode == .light ? .dark : .light
+                UserDefaults.standard.setValue(mode == .dark, forKey: "darkModeEnabled")
             }
         }
     }

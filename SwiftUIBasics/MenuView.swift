@@ -9,11 +9,17 @@ import SwiftUI
 
 struct MenuView: View {
     @State private var mode: ColorScheme = .dark
+    @State private var darkModeEnabled: Bool = true
     
     let topics: [Topic] = [
         Topic(name: "SwiftUI Basics"),
         Topic(name: "Dark Mode & User Defaults")
     ]
+    
+    private func readDarkMode() {
+        darkModeEnabled = (UserDefaults.standard.object(forKey: "darkModeEnabled") as? Bool) ?? true
+        mode = darkModeEnabled ? .dark : .light
+    }
     
     var body: some View {
         NavigationStack {
@@ -27,6 +33,9 @@ struct MenuView: View {
             }
             .navigationTitle("iOS 13 App Development")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear(perform: {
+                readDarkMode()
+            })
         }.environment(\.colorScheme, mode)
     }
 }
