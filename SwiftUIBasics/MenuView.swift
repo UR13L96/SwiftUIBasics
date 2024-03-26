@@ -13,7 +13,8 @@ struct MenuView: View {
     
     let topics: [Topic] = [
         Topic(name: "SwiftUI Basics"),
-        Topic(name: "Dark Mode & User Defaults")
+        Topic(name: "Dark Mode & User Defaults"),
+        Topic(name: "Core Data")
     ]
     
     private func readDarkMode() {
