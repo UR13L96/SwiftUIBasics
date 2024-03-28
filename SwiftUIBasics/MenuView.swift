@@ -28,7 +28,10 @@ struct MenuView: View {
 //                NavigationLink(destination: ContentView().environmentObject(RandomNumber())) {
 //                    Text(topic.name)
 //                }
-                NavigationLink(destination: DarkModeView(mode: $mode)) {
+//                NavigationLink(destination: DarkModeView(mode: $mode)) {
+//                    Text(topic.name)
+//                }
+                NavigationLink(destination: ContactsView()) {
                     Text(topic.name)
                 }
             }
