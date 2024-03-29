@@ -11,7 +11,9 @@ struct ContactsView: View {
     var body: some View {
         VStack {
             List {
-                Text("Content")
+                NavigationLink(destination: ContactDetailView()) {
+                    ContactCellView()
+                }
             }
             
             NavigationLink(destination: ContactFormView()) {
@@ -26,6 +28,8 @@ struct ContactsView: View {
                 .background(Color.green)
                 .navigationTitle("Contacts")
                 .navigationBarTitleDisplayMode(.inline)
+            
+            Spacer()
         }
     }
 }

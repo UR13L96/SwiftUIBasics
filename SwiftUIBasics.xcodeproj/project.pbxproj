@@ -23,6 +23,9 @@
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
 		A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */; };
 		A4F2562D2B9236A200DC8791 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2562C2B9236A200DC8791 /* Song.swift */; };
+		A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */; };
+		A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */; };
+		A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D3F2BB720360084AD1A /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		A4E118682B87A97A0008E2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4F2562C2B9236A200DC8791 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
+		A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		A4FA0D3F2BB720360084AD1A /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				A42953792BB5CFD1000F0D60 /* ContactFormView.swift */,
+				A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */,
+				A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,8 +83,6 @@
 		A4E118582B87A9790008E2AB = {
 			isa = PBXGroup;
 			children = (
-				A42953782BB5CF9C000F0D60 /* Views */,
-				A42953762BB5CF86000F0D60 /* ContactsView.swift */,
 				A4E118632B87A9790008E2AB /* SwiftUIBasics */,
 				A4E118622B87A9790008E2AB /* Products */,
 			);
@@ -93,7 +99,10 @@
 		A4E118632B87A9790008E2AB /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
+				A42953782BB5CF9C000F0D60 /* Views */,
 				A42FA3D72BB32C3800CFBFEE /* Models */,
+				A42953762BB5CF86000F0D60 /* ContactsView.swift */,
+				A4FA0D3F2BB720360084AD1A /* Persistence.swift */,
 				A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */,
 				A4314D662BA9E99B008969CE /* MenuView.swift */,
 				A4E118662B87A9790008E2AB /* ContentView.swift */,
@@ -191,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
+				A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */,
+				A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */,
 				A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */,
 				A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */,
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
@@ -198,6 +209,7 @@
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
+				A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */,
 				A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */,
 				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
 				A429537A2BB5CFD1000F0D60 /* ContactFormView.swift in Sources */,
