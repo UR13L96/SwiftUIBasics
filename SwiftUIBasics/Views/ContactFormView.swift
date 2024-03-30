@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContactFormView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) private var dismiss
     
     @State private var name = ""
     @State private var lastName = ""
@@ -26,7 +27,19 @@ struct ContactFormView: View {
                 .padding(10)
                 .keyboardType(.phonePad)
             
-            Button(action: {}, label: {
+            Button(action: {
+                let newContact = Contact(context: viewContext)
+                newContact.name = name
+                newContact.lastName = lastName
+                newContact.phone = phone
+                
+                do {
+                    try viewContext.save()
+                    dismiss.callAsFunction()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+            }, label: {
                 HStack {
                     Image(systemName: "person.crop.circle")
                         .foregroundStyle(Color.white)
