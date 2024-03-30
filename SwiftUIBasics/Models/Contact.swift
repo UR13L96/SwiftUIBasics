@@ -13,3 +13,17 @@ class Contact: NSManagedObject, Identifiable {
     @NSManaged var lastName: String
     @NSManaged var phone: String
 }
+
+extension Contact {
+    static func getContacts() -> NSFetchRequest<Contact>? {
+        guard let request = Contact.fetchRequest() as? NSFetchRequest<Contact> else {
+            return nil
+        }
+        
+        request.sortDescriptors = [
+            NSSortDescriptor(key: "name", ascending: true)
+        ]
+        
+        return request
+    }
+}

@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContactsView: View {
+    
+    @FetchRequest(fetchRequest: Contact.getContacts() ?? NSFetchRequest()) var contacts: FetchedResults<Contact>
+    
     var body: some View {
         VStack {
             List {
