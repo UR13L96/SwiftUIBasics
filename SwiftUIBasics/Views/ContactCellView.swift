@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContactCellView: View {
+    var name: String
+    var lastName: String
+    var phone: String
+    var initials: String
+    
     var body: some View {
         HStack {
-            Text("AE")
+            Text(initials)
                 .padding(20)
                 .background(Color.gray)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
@@ -18,14 +23,14 @@ struct ContactCellView: View {
                 .font(.title)
             
             VStack(alignment: .leading) {
-                Text("Abel")
+                Text(name)
                     .font(.title)
                     .bold()
                 
-                Text("Eduardo")
+                Text(lastName)
                     .font(.headline)
                 
-                Text("1234567890")
+                Text(phone)
                     .font(.caption)
                     .foregroundStyle(Color.secondary)
             }
@@ -34,5 +39,5 @@ struct ContactCellView: View {
 }
 
 #Preview {
-    ContactCellView()
+    ContactCellView(name: "", lastName: "", phone: "", initials: "")
 }

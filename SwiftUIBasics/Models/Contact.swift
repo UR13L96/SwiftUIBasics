@@ -12,6 +12,10 @@ class Contact: NSManagedObject, Identifiable {
     @NSManaged var name: String
     @NSManaged var lastName: String
     @NSManaged var phone: String
+    
+    var initials: String {
+        return "\(name.first ?? "N")\(lastName.first ?? "A")"
+    }
 }
 
 extension Contact {

@@ -14,9 +14,14 @@ struct ContactsView: View {
     
     var body: some View {
         VStack {
-            List {
+            List(contacts) { contact in
                 NavigationLink(destination: ContactDetailView()) {
-                    ContactCellView()
+                    ContactCellView(
+                        name: contact.name,
+                        lastName: contact.lastName,
+                        phone: contact.phone,
+                        initials: contact.initials
+                    )
                 }
             }
             
