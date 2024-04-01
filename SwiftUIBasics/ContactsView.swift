@@ -10,7 +10,16 @@ import CoreData
 
 struct ContactsView: View {
     
-    @FetchRequest(fetchRequest: Contact.getContacts() ?? NSFetchRequest()) var contacts: FetchedResults<Contact>
+//    @FetchRequest(
+//        entity: Contact.entity(),
+//        sortDescriptors: [NSSortDescriptor(keyPath: \Contact.name, ascending: true)],
+//        predicate: NSPredicate(format: "lastName = %@", "Snape")
+//    ) var contacts: FetchedResults<Contact>
+    
+    @FetchRequest(
+        entity: Contact.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Contact.name, ascending: true)]
+    ) var contacts: FetchedResults<Contact>
     
     var body: some View {
         VStack {
