@@ -9,12 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContactsView: View {
-    
-//    @FetchRequest(
-//        entity: Contact.entity(),
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Contact.name, ascending: true)],
-//        predicate: NSPredicate(format: "lastName = %@", "Snape")
-//    ) var contacts: FetchedResults<Contact>
+    @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
         entity: Contact.entity(),
@@ -23,14 +18,27 @@ struct ContactsView: View {
     
     var body: some View {
         VStack {
-            List(contacts) { contact in
-                NavigationLink(destination: ContactDetailView()) {
-                    ContactCellView(
-                        name: contact.name,
-                        lastName: contact.lastName,
-                        phone: contact.phone,
-                        initials: contact.initials
-                    )
+            List() {
+                ForEach(contacts) { contact in
+                    NavigationLink(destination: ContactDetailView()) {
+                        ContactCellView(
+                            name: contact.name,
+                            lastName: contact.lastName,
+                            phone: contact.phone,
+                            initials: contact.initials
+                        )
+                    }
+                }.onDelete { index in
+                    if let index = index.first {
+                        let contact = contacts[index]
+                        viewContext.delete(contact)
+                        
+                        do {
+                            try viewContext.save()
+                        } catch let error {
+                            debugPrint(error.localizedDescription)
+                        }
+                    }
                 }
             }
             
@@ -46,6 +54,9 @@ struct ContactsView: View {
                 .background(Color.green)
                 .navigationTitle("Contacts")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    EditButton()
+                }
             
             Spacer()
         }
