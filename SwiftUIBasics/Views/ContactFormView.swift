@@ -11,6 +11,8 @@ struct ContactFormView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
     
+    var contact: Contact? = nil
+    
     @State private var name = ""
     @State private var lastName = ""
     @State private var phone = ""
@@ -28,10 +30,16 @@ struct ContactFormView: View {
                 .keyboardType(.phonePad)
             
             Button(action: {
-                let newContact = Contact(context: viewContext)
-                newContact.name = name
-                newContact.lastName = lastName
-                newContact.phone = phone
+                if var contact = contact {
+                    contact.name = name
+                    contact.lastName = lastName
+                    contact.phone = phone
+                } else {
+                    let newContact = Contact(context: viewContext)
+                    newContact.name = name
+                    newContact.lastName = lastName
+                    newContact.phone = phone
+                }
                 
                 do {
                     try viewContext.save()
@@ -41,10 +49,10 @@ struct ContactFormView: View {
                 }
             }, label: {
                 HStack {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: contact == nil ? "person.crop.circle" : "pencil")
                         .foregroundStyle(Color.white)
                         .font(.title)
-                    Text("Save contact")
+                    Text(contact == nil ? "Add contact" : "Edit contact")
                         .foregroundStyle(Color.white)
                         .font(.title)
                 }
@@ -53,7 +61,11 @@ struct ContactFormView: View {
             })
             
             Spacer()
-                .navigationTitle("Add contact")
+                .navigationTitle(contact == nil ? "Add contact" : "Edit contact")
+        }.onAppear {
+            name = contact?.name ?? ""
+            lastName = contact?.lastName ?? ""
+            phone = contact?.phone ?? ""
         }
     }
 }

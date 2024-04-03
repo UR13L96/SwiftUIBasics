@@ -20,7 +20,7 @@ struct ContactsView: View {
         VStack {
             List() {
                 ForEach(contacts) { contact in
-                    NavigationLink(destination: ContactDetailView()) {
+                    NavigationLink(destination: ContactDetailView(contact: contact)) {
                         ContactCellView(
                             name: contact.name,
                             lastName: contact.lastName,

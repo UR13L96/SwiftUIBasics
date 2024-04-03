@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct ContactDetailView: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    var contact: Contact
+    
     var body: some View {
         VStack {
-            Text("AE")
+            Text(contact.initials)
                 .padding(50)
                 .background(Color.gray)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .foregroundStyle(Color.white)
                 .font(.custom("Arial", size: 100))
             
-            Text("Abel")
+            Text(contact.name)
                 .font(.title)
                 .bold()
             
-            Text("Eduardo")
+            Text(contact.lastName)
                 .font(.headline)
             
-            Text("1234567890")
+            Text(contact.phone)
                 .font(.caption)
                 .foregroundStyle(Color.secondary)
             
@@ -34,10 +38,10 @@ struct ContactDetailView: View {
                         .modifier(RoundedButton(color: .green))
                 })
                 
-                Button(action: {}, label: {
+                NavigationLink(destination: ContactFormView(contact: contact)) {
                     Image(systemName: "pencil")
                         .modifier(RoundedButton(color: .blue))
-                })
+                }
             }
             
             Spacer()
@@ -59,5 +63,5 @@ struct RoundedButton: ViewModifier {
 }
 
 #Preview {
-    ContactDetailView()
+    ContactDetailView(contact: Contact())
 }
