@@ -33,7 +33,13 @@ struct ContactDetailView: View {
                 .foregroundStyle(Color.secondary)
             
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    guard let phone = URL(string: "tel://\(contact.phone)") else {
+                        return
+                    }
+                    
+                    UIApplication.shared.open(phone)
+                }, label: {
                     Image(systemName: "phone.fill")
                         .modifier(RoundedButton(color: .green))
                 })
