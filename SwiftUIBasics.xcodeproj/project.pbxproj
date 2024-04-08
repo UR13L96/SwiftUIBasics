@@ -23,6 +23,11 @@
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
 		A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */; };
 		A4F2562D2B9236A200DC8791 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2562C2B9236A200DC8791 /* Song.swift */; };
+		A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F86AD52BC4454F001B5AF0 /* Place.swift */; };
+		A4F86AD82BC445AF001B5AF0 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F86AD72BC445AF001B5AF0 /* PlacesView.swift */; };
+		A4F86ADA2BC445C0001B5AF0 /* PlaceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F86AD92BC445C0001B5AF0 /* PlaceFormView.swift */; };
+		A4F86ADC2BC445F1001B5AF0 /* PlacesNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F86ADB2BC445F1001B5AF0 /* PlacesNavigationBarView.swift */; };
+		A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F86ADD2BC44890001B5AF0 /* PlacesHomeView.swift */; };
 		A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */; };
 		A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */; };
 		A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D3F2BB720360084AD1A /* Persistence.swift */; };
@@ -46,6 +51,11 @@
 		A4E118682B87A97A0008E2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4F2562C2B9236A200DC8791 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A4F86AD52BC4454F001B5AF0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		A4F86AD72BC445AF001B5AF0 /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
+		A4F86AD92BC445C0001B5AF0 /* PlaceFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFormView.swift; sourceTree = "<group>"; };
+		A4F86ADB2BC445F1001B5AF0 /* PlacesNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesNavigationBarView.swift; sourceTree = "<group>"; };
+		A4F86ADD2BC44890001B5AF0 /* PlacesHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesHomeView.swift; sourceTree = "<group>"; };
 		A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
 		A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		A4FA0D3F2BB720360084AD1A /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A42FA3D82BB32C4D00CFBFEE /* Contact.swift */,
+				A4F86AD52BC4454F001B5AF0 /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +110,7 @@
 		A4E118632B87A9790008E2AB /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
+				A4F86AD12BC44494001B5AF0 /* Modules */,
 				A42953782BB5CF9C000F0D60 /* Views */,
 				A42FA3D72BB32C3800CFBFEE /* Models */,
 				A42953762BB5CF86000F0D60 /* ContactsView.swift */,
@@ -126,6 +138,25 @@
 				A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4F86AD12BC44494001B5AF0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A4F86AD22BC4449B001B5AF0 /* CoreDataImages */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A4F86AD22BC4449B001B5AF0 /* CoreDataImages */ = {
+			isa = PBXGroup;
+			children = (
+				A4F86AD72BC445AF001B5AF0 /* PlacesView.swift */,
+				A4F86ADD2BC44890001B5AF0 /* PlacesHomeView.swift */,
+				A4F86AD92BC445C0001B5AF0 /* PlaceFormView.swift */,
+				A4F86ADB2BC445F1001B5AF0 /* PlacesNavigationBarView.swift */,
+			);
+			path = CoreDataImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F86ADC2BC445F1001B5AF0 /* PlacesNavigationBarView.swift in Sources */,
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
 				A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */,
 				A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */,
@@ -208,10 +240,14 @@
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
+				A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */,
+				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
 				A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */,
+				A4F86AD82BC445AF001B5AF0 /* PlacesView.swift in Sources */,
 				A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */,
 				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
+				A4F86ADA2BC445C0001B5AF0 /* PlaceFormView.swift in Sources */,
 				A429537A2BB5CFD1000F0D60 /* ContactFormView.swift in Sources */,
 				A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */,
 				A43215612B9A16EB008F4124 /* CounterView.swift in Sources */,

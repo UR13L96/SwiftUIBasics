@@ -14,7 +14,8 @@ struct MenuView: View {
     let topics: [Topic] = [
         Topic(name: "SwiftUI Basics"),
         Topic(name: "Dark Mode & User Defaults"),
-        Topic(name: "Core Data")
+        Topic(name: "Core Data"),
+        Topic(name: "Core Data & Images")
     ]
     
     private func readDarkMode() {
@@ -31,7 +32,10 @@ struct MenuView: View {
 //                NavigationLink(destination: DarkModeView(mode: $mode)) {
 //                    Text(topic.name)
 //                }
-                NavigationLink(destination: ContactsView()) {
+//                NavigationLink(destination: ContactsView()) {
+//                    Text(topic.name)
+//                }
+                NavigationLink(destination: PlacesView()) {
                     Text(topic.name)
                 }
             }
