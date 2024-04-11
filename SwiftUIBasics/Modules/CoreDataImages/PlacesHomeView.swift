@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct PlacesHomeView: View {
+    @FetchRequest(entity: Place.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Place.name, ascending: true)
+    ]) var places: FetchedResults<Place>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ScrollView(.horizontal, showsIndicators: true) {
+                HStack {
+                    ForEach(places) { place in
+                        VStack {
+                            Spacer()
+                            
+                            Image(uiImage: UIImage(data: place.image) ?? UIImage())
+                                .resizable()
+                                .frame(width: 250, height: 400)
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .shadow(radius: 16)
+                                .padding(10)
+                            
+                            Text(place.name)
+                                .font(.title)
+                            
+                            Spacer()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
