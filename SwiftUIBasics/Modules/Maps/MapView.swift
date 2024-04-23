@@ -19,6 +19,7 @@ struct MapView: View {
             Marker("Holywood", coordinate: hollywood)
                 .tint(.purple)
         }
+        .mapStyle(.standard(elevation: .realistic))
     }
 }
 
