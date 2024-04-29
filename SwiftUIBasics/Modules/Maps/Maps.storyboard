@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Y6W-OH-hqX" customClass="MapViewController" customModule="SwiftUIBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-D7-rfO">
+                                <rect key="frame" x="0.0" y="126" width="393" height="692"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47c-r0-cOn">
+                                <rect key="frame" x="138" y="75" width="117" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Coordinates"/>
+                                <connections>
+                                    <segue destination="oTI-Ed-cat" kind="show" id="YBQ-hG-RPd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ccr-D7-rfO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Rai-Fi-hAQ"/>
+                            <constraint firstItem="ccr-D7-rfO" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="XL7-Th-aUZ"/>
+                            <constraint firstItem="ccr-D7-rfO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Xnc-5u-LWf"/>
+                            <constraint firstItem="47c-r0-cOn" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Y8V-q8-Sei"/>
+                            <constraint firstItem="47c-r0-cOn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="jOt-QA-GAG"/>
+                            <constraint firstItem="ccr-D7-rfO" firstAttribute="top" secondItem="47c-r0-cOn" secondAttribute="bottom" constant="16" id="vzx-DC-20p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="ccr-D7-rfO" id="HH8-Di-rYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
+        </scene>
+        <!--Coordinates View Controller-->
+        <scene sceneID="iDB-2H-Fhg">
+            <objects>
+                <viewController storyboardIdentifier="CoordinatesViewController" id="oTI-Ed-cat" customClass="CoordinatesViewController" customModule="SwiftUIBasics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFL-sn-RaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-JV-qjU">
+                                <rect key="frame" x="138.66666666666666" y="353.66666666666669" width="116" height="134.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiK-tq-8x2">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmT-bZ-iA0">
+                                        <rect key="frame" x="0.0" y="100.33333333333331" width="116" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Get location"/>
+                                        <connections>
+                                            <action selector="onGetCoordinatesClicked:" destination="oTI-Ed-cat" eventType="touchUpInside" id="Zu0-vi-2d0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gp6-77-T2D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wtJ-JV-qjU" firstAttribute="centerX" secondItem="Gp6-77-T2D" secondAttribute="centerX" id="fHu-ig-J2U"/>
+                            <constraint firstItem="wtJ-JV-qjU" firstAttribute="centerY" secondItem="Gp6-77-T2D" secondAttribute="centerY" id="vCk-Mf-j9A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K7m-so-P0q"/>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="MiK-tq-8x2" id="ynZ-5D-YHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8g-3I-qvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
