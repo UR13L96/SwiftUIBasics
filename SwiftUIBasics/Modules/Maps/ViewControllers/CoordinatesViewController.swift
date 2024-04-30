@@ -10,6 +10,7 @@ import CoreLocation
 
 class CoordinatesViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var coordinatesLabel: UILabel!
+    @IBOutlet weak var countryTextField: UITextField!
     
     var manager = CLLocationManager()
     var latitude: CLLocationDegrees?
@@ -27,6 +28,10 @@ class CoordinatesViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func onGetCoordinatesClicked(_ sender: Any) {
         if let latitude = latitude, let longitude = longitude {
             self.coordinatesLabel.text = "(\(latitude), \(longitude))"
+            
+            UserDefaults.standard.set(latitude, forKey: "latitude")
+            UserDefaults.standard.set(longitude, forKey: "longitude")
+            UserDefaults.standard.set(countryTextField.text, forKey: "country")
         }
     }
     
