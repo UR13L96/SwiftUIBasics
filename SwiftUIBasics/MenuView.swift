@@ -16,7 +16,8 @@ struct MenuView: View {
         Topic(name: "Dark Mode & User Defaults"),
         Topic(name: "Core Data"),
         Topic(name: "Core Data & Images"),
-        Topic(name: "Maps")
+        Topic(name: "Maps"),
+        Topic(name: "Realm")
     ]
     
     private func readDarkMode() {
@@ -26,21 +27,11 @@ struct MenuView: View {
     
     var body: some View {
         NavigationStack {
-            List(topics) { topic in
-//                NavigationLink(destination: ContentView().environmentObject(RandomNumber())) {
-//                    Text(topic.name)
-//                }
-//                NavigationLink(destination: DarkModeView(mode: $mode)) {
-//                    Text(topic.name)
-//                }
-//                NavigationLink(destination: ContactsView()) {
-//                    Text(topic.name)
-//                }
-//                NavigationLink(destination: PlacesView()) {
-//                    Text(topic.name)
-//                }
-                NavigationLink(destination: MapMenuView()) {
-                    Text(topic.name)
+            List() {
+                ForEach(Array(topics.enumerated()), id: \.offset) { i, topic in
+                    NavigationLink(destination: moduleView(i: i)) {
+                        Text(topic.name)
+                    }
                 }
             }
             .navigationTitle("iOS 13 App Development")
@@ -49,6 +40,24 @@ struct MenuView: View {
                 readDarkMode()
             })
         }.environment(\.colorScheme, mode)
+    }
+    
+    @ViewBuilder
+    func moduleView(i: Int) -> some View {
+        switch i {
+        case 0:
+            ContentView().environmentObject(RandomNumber())
+        case 1:
+            DarkModeView(mode: $mode)
+        case 2:
+            ContactsView()
+        case 3:
+            PlacesView()
+        case 4:
+            MapMenuView()
+        default:
+            ContentView().environmentObject(RandomNumber())
+        }
     }
 }
 
