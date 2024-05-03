@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct MenuView: View {
     @State private var mode: ColorScheme = .dark

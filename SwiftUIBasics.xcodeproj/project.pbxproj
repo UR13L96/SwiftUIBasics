@@ -38,9 +38,12 @@
 		A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */; };
 		A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */; };
 		A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FA0D3F2BB720360084AD1A /* Persistence.swift */; };
+		D66EA49A6D77073AF1FA8109 /* Pods_SwiftUIBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46E90AFCB46F02A664DC7E0 /* Pods_SwiftUIBasics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.release.xcconfig"; sourceTree = "<group>"; };
+		3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.debug.xcconfig"; sourceTree = "<group>"; };
 		A428B1112B96266D00BA62CA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		A42953762BB5CF86000F0D60 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		A42953792BB5CFD1000F0D60 /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		A4314D682BA9EBA2008969CE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		A43215602B9A16EB008F4124 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
+		A46E90AFCB46F02A664DC7E0 /* Pods_SwiftUIBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47F9DA12BDFF6FF0057398D /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		A47F9DA42BDFF7430057398D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
@@ -80,12 +84,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66EA49A6D77073AF1FA8109 /* Pods_SwiftUIBasics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		076DA1DFD851AFAE35024DC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */,
+				140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		73852242346FB0C32DFA350A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A46E90AFCB46F02A664DC7E0 /* Pods_SwiftUIBasics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A42953782BB5CF9C000F0D60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,8 @@
 			children = (
 				A4E118632B87A9790008E2AB /* SwiftUIBasics */,
 				A4E118622B87A9790008E2AB /* Products */,
+				076DA1DFD851AFAE35024DC8 /* Pods */,
+				73852242346FB0C32DFA350A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,9 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4E1186F2B87A97A0008E2AB /* Build configuration list for PBXNativeTarget "SwiftUIBasics" */;
 			buildPhases = (
+				74F0A23338400BA0A2BC3DF0 /* [CP] Check Pods Manifest.lock */,
 				A4E1185D2B87A9790008E2AB /* Sources */,
 				A4E1185E2B87A9790008E2AB /* Frameworks */,
 				A4E1185F2B87A9790008E2AB /* Resources */,
+				5420696D7E5BD70954ACB71C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +288,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5420696D7E5BD70954ACB71C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74F0A23338400BA0A2BC3DF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUIBasics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4E1185D2B87A9790008E2AB /* Sources */ = {
@@ -422,6 +490,7 @@
 		};
 		A4E118702B87A97A0008E2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,6 +499,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIBasics/Preview Content\"";
 				DEVELOPMENT_TEAM = W8UT8UK49Y;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Usaremos la ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +523,7 @@
 		};
 		A4E118712B87A97A0008E2AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +532,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIBasics/Preview Content\"";
 				DEVELOPMENT_TEAM = W8UT8UK49Y;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Usaremos la ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
