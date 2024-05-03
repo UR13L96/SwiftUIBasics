@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct MenuView: View {
     @State private var mode: ColorScheme = .dark
@@ -56,6 +55,8 @@ struct MenuView: View {
             PlacesView()
         case 4:
             MapMenuView()
+        case 5:
+            PersonsView()
         default:
             ContentView().environmentObject(RandomNumber())
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42525E52BE53CE200C10D0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42525E42BE53CE200C10D0C /* Person.swift */; };
+		A42525E92BE53E5A00C10D0C /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42525E82BE53E5A00C10D0C /* PersonsView.swift */; };
 		A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B1112B96266D00BA62CA /* RandomNumber.swift */; };
 		A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42953762BB5CF86000F0D60 /* ContactsView.swift */; };
 		A429537A2BB5CFD1000F0D60 /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42953792BB5CFD1000F0D60 /* ContactFormView.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.release.xcconfig"; sourceTree = "<group>"; };
 		3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.debug.xcconfig"; sourceTree = "<group>"; };
+		A42525E42BE53CE200C10D0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A42525E82BE53E5A00C10D0C /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
 		A428B1112B96266D00BA62CA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		A42953762BB5CF86000F0D60 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		A42953792BB5CFD1000F0D60 /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A42525E22BE53CBB00C10D0C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A42FA3D82BB32C4D00CFBFEE /* Contact.swift */,
+				A4F86AD52BC4454F001B5AF0 /* Place.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A42525E32BE53CC400C10D0C /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A42525E42BE53CE200C10D0C /* Person.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A42525E62BE53E3E00C10D0C /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A42525E82BE53E5A00C10D0C /* PersonsView.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		A42953782BB5CF9C000F0D60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +150,8 @@
 		A42FA3D72BB32C3800CFBFEE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A42FA3D82BB32C4D00CFBFEE /* Contact.swift */,
-				A4F86AD52BC4454F001B5AF0 /* Place.swift */,
+				A42525E32BE53CC400C10D0C /* Realm */,
+				A42525E22BE53CBB00C10D0C /* CoreData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +232,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A42525E62BE53E3E00C10D0C /* Realm */,
 				A4D25FB12BD2E3FF00278358 /* Maps */,
 				A4F86AD22BC4449B001B5AF0 /* CoreDataImages */,
 			);
@@ -341,6 +371,7 @@
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
 				A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */,
 				A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */,
+				A42525E92BE53E5A00C10D0C /* PersonsView.swift in Sources */,
 				A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */,
 				A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */,
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
@@ -354,6 +385,7 @@
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
 				A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */,
 				A4F86AD82BC445AF001B5AF0 /* PlacesView.swift in Sources */,
+				A42525E52BE53CE200C10D0C /* Person.swift in Sources */,
 				A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */,
 				A47F9DA72BDFFA1D0057398D /* CoordinatesViewController.swift in Sources */,
 				A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */,
