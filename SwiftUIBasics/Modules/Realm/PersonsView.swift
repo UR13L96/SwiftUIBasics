@@ -15,7 +15,11 @@ struct PersonsView: View {
                 Text("Subtitle")
                     .font(.caption)
             }
-        }
+        }.toolbar(content: {
+            NavigationLink(destination: PersonFormView()) {
+                Image(systemName: "plus")
+            }
+        })
     }
 }
 
