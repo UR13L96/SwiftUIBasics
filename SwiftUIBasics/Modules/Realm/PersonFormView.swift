@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct PersonFormView: View {
     @State private var name = ""
     @State private var age = ""
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack(alignment: .center) {
@@ -23,7 +25,20 @@ struct PersonFormView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button(action: {
-                print("Will save person")
+                do {
+                    let realm = try Realm()
+                    
+                    let person = Person()
+                    person.name = name
+                    person.age = Int(age) ?? 0
+                    
+                    try realm.write {
+                        realm.add(person)
+                        dismiss.callAsFunction()
+                    }
+                } catch let error {
+                    debugPrint(error)
+                }
             }, label: {
                 HStack {
                     Image(systemName: "plus.circle.fill")
