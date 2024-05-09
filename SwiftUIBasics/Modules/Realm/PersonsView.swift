@@ -20,6 +20,19 @@ struct PersonsView: View {
                         Text("\(person.age)")
                             .font(.caption)
                     }
+                }.onDelete { index in
+                    if let index = index.first {
+                        let person = persons[index]
+                        
+                        do {
+                            let realm = try Realm()
+                            try realm.write {
+                                realm.delete(person)
+                            }
+                        } catch let error {
+                            debugPrint(error)
+                        }
+                    }
                 }
             }
         }.toolbar(content: {
