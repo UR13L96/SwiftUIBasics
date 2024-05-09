@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Person: Object {
+class Person: Object, Identifiable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var name = ""
     @objc dynamic var age = 0
