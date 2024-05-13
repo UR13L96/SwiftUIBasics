@@ -15,10 +15,12 @@ struct PersonsView: View {
         List() {
             if let persons = persons {
                 ForEach(persons) { person in
-                    VStack(alignment: .leading) {
-                        Text(person.name)
-                        Text("\(person.age)")
-                            .font(.caption)
+                    NavigationLink(destination: PersonFormView(person: person)) {
+                        VStack(alignment: .leading) {
+                            Text(person.name)
+                            Text("\(person.age)")
+                                .font(.caption)
+                        }
                     }
                 }.onDelete { index in
                     if let index = index.first {

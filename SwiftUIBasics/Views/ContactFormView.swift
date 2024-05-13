@@ -30,7 +30,7 @@ struct ContactFormView: View {
                 .keyboardType(.phonePad)
             
             Button(action: {
-                if var contact = contact {
+                if let contact = contact {
                     contact.name = name
                     contact.lastName = lastName
                     contact.phone = phone

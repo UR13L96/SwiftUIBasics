@@ -143,6 +143,7 @@
 		A42953782BB5CF9C000F0D60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A42953762BB5CF86000F0D60 /* ContactsView.swift */,
 				A42953792BB5CFD1000F0D60 /* ContactFormView.swift */,
 				A4FA0D1C2BB7153D0084AD1A /* ContactCellView.swift */,
 				A4FA0D1E2BB717FE0084AD1A /* ContactDetailView.swift */,
@@ -205,7 +206,6 @@
 				A4F86AD12BC44494001B5AF0 /* Modules */,
 				A42953782BB5CF9C000F0D60 /* Views */,
 				A42FA3D72BB32C3800CFBFEE /* Models */,
-				A42953762BB5CF86000F0D60 /* ContactsView.swift */,
 				A4FA0D3F2BB720360084AD1A /* Persistence.swift */,
 				A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */,
 				A4314D662BA9E99B008969CE /* MenuView.swift */,

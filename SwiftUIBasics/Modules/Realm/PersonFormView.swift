@@ -13,9 +13,11 @@ struct PersonFormView: View {
     @State private var age = ""
     @Environment(\.dismiss) private var dismiss
     
+    var person: Person?
+    
     var body: some View {
         VStack(alignment: .center) {
-            Text("Agregar persona")
+            Text("\(person == nil ? "Add" : "Update") person")
                 .font(.title)
             
             TextField("Name", text: $name)
@@ -25,19 +27,10 @@ struct PersonFormView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button(action: {
-                do {
-                    let realm = try Realm()
-                    
-                    let person = Person()
-                    person.name = name
-                    person.age = Int(age) ?? 0
-                    
-                    try realm.write {
-                        realm.add(person)
-                        dismiss.callAsFunction()
-                    }
-                } catch let error {
-                    debugPrint(error)
+                if person == nil {
+                    createPerson()
+                } else {
+                    updatePerson()
                 }
             }, label: {
                 HStack {
@@ -57,6 +50,46 @@ struct PersonFormView: View {
             Spacer()
         }
         .padding(.all)
+        .onAppear {
+            if let person = person {
+                name = person.name
+                age = String(person.age)
+            }
+        }
+    }
+    
+    private func createPerson() {
+        do {
+            let realm = try Realm()
+            
+            let person = Person()
+            person.name = name
+            person.age = Int(age) ?? 0
+            
+            try realm.write {
+                realm.add(person)
+                dismiss.callAsFunction()
+            }
+        } catch let error {
+            debugPrint(error)
+        }
+    }
+    
+    private func updatePerson() {
+        do {
+            let realm = try Realm()
+            
+            try realm.write {
+                if let person = person {
+                    person.name = name
+                    person.age = Int(age) ?? 0
+                }
+                
+                dismiss.callAsFunction()
+            }
+        } catch let error {
+            debugPrint(error)
+        }
     }
 }
 
