@@ -13,6 +13,8 @@ class Person: Object, Identifiable {
     @objc dynamic var name = ""
     @objc dynamic var age = 0
     
+    let pets = List<Pet>()
+    
     override class func primaryKey() -> String? {
         return "id"
     }
