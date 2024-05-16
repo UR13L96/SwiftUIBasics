@@ -11,6 +11,10 @@ import RealmSwift
 struct PersonFormView: View {
     @State private var name = ""
     @State private var age = ""
+    
+    @State private var petName = ""
+    @State private var petType = ""
+    
     @Environment(\.dismiss) private var dismiss
     
     var person: Person?
@@ -46,6 +50,22 @@ struct PersonFormView: View {
                 .padding(10)
                 .background(Color.blue)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+            
+            if person != nil {
+                Text("Save pet")
+                    .font(.title)
+                
+                TextField("Name", text: $petName)
+                
+                TextField("Type", text: $petType)
+                
+                Button {
+                    savePet()
+                } label: {
+                    Text("Save pet")
+                }
+
+            }
             
             Spacer()
         }
@@ -89,6 +109,24 @@ struct PersonFormView: View {
             }
         } catch let error {
             debugPrint(error)
+        }
+    }
+    
+    private func savePet() {
+        do {
+            let realm = try Realm()
+            let pet = Pet()
+            pet.name = petName
+            pet.type = petType
+            if let personID = person?.id {
+                pet.personID = personID
+            }
+            
+            try realm.write {
+                self.person?.pets.append(pet)
+            }
+        } catch let error {
+            print(error)
         }
     }
 }
