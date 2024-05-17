@@ -19,6 +19,7 @@
 		A4314D692BA9EBA2008969CE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4314D682BA9EBA2008969CE /* Topic.swift */; };
 		A43215612B9A16EB008F4124 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43215602B9A16EB008F4124 /* CounterView.swift */; };
 		A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */; };
+		A470C91C2BF7B45600AF0F4D /* PetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470C91B2BF7B45600AF0F4D /* PetsView.swift */; };
 		A47F9DA22BDFF6FF0057398D /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F9DA12BDFF6FF0057398D /* Maps.storyboard */; };
 		A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F9DA42BDFF7430057398D /* MapViewController.swift */; };
 		A47F9DA72BDFFA1D0057398D /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */; };
@@ -61,6 +62,7 @@
 		A43215602B9A16EB008F4124 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
 		A46E90AFCB46F02A664DC7E0 /* Pods_SwiftUIBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A470C91B2BF7B45600AF0F4D /* PetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsView.swift; sourceTree = "<group>"; };
 		A47F9DA12BDFF6FF0057398D /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		A47F9DA42BDFF7430057398D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				A42525E82BE53E5A00C10D0C /* PersonsView.swift */,
 				A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */,
+				A470C91B2BF7B45600AF0F4D /* PetsView.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A470C91C2BF7B45600AF0F4D /* PetsView.swift in Sources */,
 				A4F86ADC2BC445F1001B5AF0 /* PlacesNavigationBarView.swift in Sources */,
 				A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */,
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,

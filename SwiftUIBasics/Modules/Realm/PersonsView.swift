@@ -21,18 +21,22 @@ struct PersonsView: View {
                             Text("\(person.age)")
                                 .font(.caption)
                         }
-                    }
-                }.onDelete { index in
-                    if let index = index.first {
-                        let person = persons[index]
+                    }.swipeActions {
+                        NavigationLink(destination: PetsView()) {
+                            Text("Show pets")
+                        }
                         
-                        do {
-                            let realm = try Realm()
-                            try realm.write {
-                                realm.delete(person)
+                        Button(role: .destructive) {
+                            do {
+                                let realm = try Realm()
+                                try realm.write {
+                                    realm.delete(person)
+                                }
+                            } catch let error {
+                                debugPrint(error)
                             }
-                        } catch let error {
-                            debugPrint(error)
+                        } label: {
+                            Text("Delete")
                         }
                     }
                 }
