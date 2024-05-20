@@ -30,6 +30,7 @@ struct PersonsView: View {
                             do {
                                 let realm = try Realm()
                                 try realm.write {
+                                    realm.delete(person.pets)
                                     realm.delete(person)
                                 }
                             } catch let error {
