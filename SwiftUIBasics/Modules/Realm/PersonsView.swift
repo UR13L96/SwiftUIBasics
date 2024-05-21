@@ -22,7 +22,7 @@ struct PersonsView: View {
                                 .font(.caption)
                         }
                     }.swipeActions {
-                        NavigationLink(destination: PetsView()) {
+                        NavigationLink(destination: PetsView(person: person)) {
                             Text("Show pets")
                         }
                         

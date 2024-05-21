@@ -28,7 +28,7 @@ struct PetsView: View {
         .onAppear {
             do {
                 let realm = try Realm()
-                self.pets = realm.objects(Pet.self)
+                self.pets = realm.objects(Pet.self).filter("personID == %@", person?.id ?? "")
             } catch let error {
                 debugPrint(error)
             }
