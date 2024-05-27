@@ -17,7 +17,8 @@ struct MenuView: View {
         Topic(name: "Core Data"),
         Topic(name: "Core Data & Images"),
         Topic(name: "Maps"),
-        Topic(name: "Realm")
+        Topic(name: "Realm"),
+        Topic(name: "APIs URLSession")
     ]
     
     private func readDarkMode() {
@@ -55,6 +56,8 @@ struct MenuView: View {
             PlacesView()
         case 4:
             MapMenuView()
+        case 5:
+            PersonsView()
         case 5:
             PersonsView()
         default:
