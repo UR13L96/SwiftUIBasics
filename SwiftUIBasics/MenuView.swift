@@ -58,8 +58,8 @@ struct MenuView: View {
             MapMenuView()
         case 5:
             PersonsView()
-        case 5:
-            PersonsView()
+        case 6:
+            UsersView()
         default:
             ContentView().environmentObject(RandomNumber())
         }
