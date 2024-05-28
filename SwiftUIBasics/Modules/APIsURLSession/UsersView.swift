@@ -11,7 +11,19 @@ struct UsersView: View {
     @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(networkManager.baseResponse.data, id: \.id) { user in
+            HStack {
+                Text(user.avatar)
+                VStack(alignment: .leading) {
+                    Text(user.firstName)
+                        .font(.title)
+                        .bold()
+                    
+                    Text(user.email)
+                        .font(.subheadline)
+                }
+            }
+        }
     }
 }
 

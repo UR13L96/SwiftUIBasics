@@ -23,8 +23,10 @@ class NetworkManager: ObservableObject {
         URLSession.shared.dataTask(with: url) { data, response, _ in
             do {
                 guard let data = data else { return }
-                let users = try JSONDecoder().decode(BaseResponse.self, from: data)
-                print(users)
+                let dataResponse = try JSONDecoder().decode(BaseResponse.self, from: data)
+                DispatchQueue.main.async {
+                    self.baseResponse = dataResponse
+                }
             } catch let error {
                 print(error)
             }
