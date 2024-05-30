@@ -13,7 +13,10 @@ struct UsersView: View {
     var body: some View {
         List(networkManager.baseResponse.data, id: \.id) { user in
             HStack {
-                Text(user.avatar)
+                AsyncImage(url: URL(string: user.avatar))
+                    .scaledToFit()
+                    .frame(width: 96, height: 96)
+                    .clipped()
                 VStack(alignment: .leading) {
                     Text(user.firstName)
                         .font(.title)
