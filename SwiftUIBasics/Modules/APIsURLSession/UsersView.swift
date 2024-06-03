@@ -27,6 +27,10 @@ struct UsersView: View {
                 }
             }
         }
+        
+        NavigationLink(destination: LoginView()) {
+            Text("Go to Login")
+        }
     }
 }
 

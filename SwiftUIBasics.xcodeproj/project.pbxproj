@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4213D982C0E1E9800C719DE /* LoginView.swift */; };
+		A4213D9B2C0E205100C719DE /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4213D9A2C0E205100C719DE /* LoginRequest.swift */; };
 		A42525E52BE53CE200C10D0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42525E42BE53CE200C10D0C /* Person.swift */; };
 		A42525E92BE53E5A00C10D0C /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42525E82BE53E5A00C10D0C /* PersonsView.swift */; };
 		A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428B1112B96266D00BA62CA /* RandomNumber.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.release.xcconfig"; sourceTree = "<group>"; };
 		3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.debug.xcconfig"; sourceTree = "<group>"; };
+		A4213D982C0E1E9800C719DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A4213D9A2C0E205100C719DE /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		A42525E42BE53CE200C10D0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A42525E82BE53E5A00C10D0C /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
 		A428B1112B96266D00BA62CA /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				A48157DB2C06304000FCB379 /* Utils */,
 				A43FA9B42C04E8D400E7F8D9 /* Models */,
 				A48157DE2C06340C00FCB379 /* UsersView.swift */,
+				A4213D982C0E1E9800C719DE /* LoginView.swift */,
 			);
 			path = APIsURLSession;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				A48157DC2C06304A00FCB379 /* NetworkManager.swift */,
+				A4213D9A2C0E205100C719DE /* LoginRequest.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
+				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
 				A4D25FB72BD2E47700278358 /* MapView.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */,
@@ -439,6 +446,7 @@
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,
 				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
+				A4213D9B2C0E205100C719DE /* LoginRequest.swift in Sources */,
 				A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */,
 				A4F86AD82BC445AF001B5AF0 /* PlacesView.swift in Sources */,
 				A4E91D552BE92E2F0072C7F1 /* PersonFormView.swift in Sources */,
