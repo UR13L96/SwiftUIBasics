@@ -30,12 +30,20 @@ class LoginRequest: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         URLSession.shared.dataTask(with: request) { (data, response, _) in
-            if let response = response {
-                print(response)
-            }
-            
             guard let data = data else { return }
-            print(data)
+            do {
+                let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+                if !loginResponse.token.isEmpty {
+                    DispatchQueue.main.async {
+                        self.authenticated = 1
+                    }
+                }
+            } catch let error {
+                print("Error at login")
+                DispatchQueue.main.async {
+                    self.authenticated = 2
+                }
+            }
         }.resume()
     }
 }

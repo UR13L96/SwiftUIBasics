@@ -25,6 +25,12 @@ struct LoginView: View {
             } label: {
                 Text("Login")
             }
+            
+            if loginRequest.authenticated == 1 {
+                Text("Authenticated")
+            } else if loginRequest.authenticated == 2 {
+                Text("Unauthenticated")
+            }
         }.padding()
     }
 }
