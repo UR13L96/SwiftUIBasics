@@ -10,6 +10,7 @@ import RealmSwift
 
 @main
 struct SwiftUIBasicsApp: SwiftUI.App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     let persistenceController = PersistenceController.shared
     
     init() {

@@ -24,6 +24,7 @@
 		A43FA9B82C04EAE800E7F8D9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FA9B72C04EAE800E7F8D9 /* UserResponse.swift */; };
 		A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */; };
 		A470C91C2BF7B45600AF0F4D /* PetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470C91B2BF7B45600AF0F4D /* PetsView.swift */; };
+		A47493BC2C25E29900CF9281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47493BB2C25E29900CF9281 /* AppDelegate.swift */; };
 		A47F9DA22BDFF6FF0057398D /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F9DA12BDFF6FF0057398D /* Maps.storyboard */; };
 		A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F9DA42BDFF7430057398D /* MapViewController.swift */; };
 		A47F9DA72BDFFA1D0057398D /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */; };
@@ -39,6 +40,7 @@
 		A4E118672B87A9790008E2AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118662B87A9790008E2AB /* ContentView.swift */; };
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
 		A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */; };
+		A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */; };
 		A4E8AF362BF3BD9900054C61 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8AF352BF3BD9900054C61 /* Pet.swift */; };
 		A4E91D552BE92E2F0072C7F1 /* PersonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */; };
 		A4F2562D2B9236A200DC8791 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2562C2B9236A200DC8791 /* Song.swift */; };
@@ -74,6 +76,7 @@
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
 		A46E90AFCB46F02A664DC7E0 /* Pods_SwiftUIBasics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIBasics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A470C91B2BF7B45600AF0F4D /* PetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsView.swift; sourceTree = "<group>"; };
+		A47493BB2C25E29900CF9281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47F9DA12BDFF6FF0057398D /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		A47F9DA42BDFF7430057398D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		A4E118662B87A9790008E2AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4E118682B87A97A0008E2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4E8AF352BF3BD9900054C61 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormView.swift; sourceTree = "<group>"; };
 		A4F2562C2B9236A200DC8791 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -201,6 +205,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A47493BA2C25E28700CF9281 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A47493BB2C25E29900CF9281 /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		A47F9DA32BDFF7270057398D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +265,7 @@
 		A4E118632B87A9790008E2AB /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
+				A47493BA2C25E28700CF9281 /* SupportingFiles */,
 				A4F86AD12BC44494001B5AF0 /* Modules */,
 				A42953782BB5CF9C000F0D60 /* Views */,
 				A42FA3D72BB32C3800CFBFEE /* Models */,
@@ -267,6 +280,7 @@
 				A4314D682BA9EBA2008969CE /* Topic.swift */,
 				A49139602BAB363900C7D701 /* DarkModeView.swift */,
 				A42FA3D42BB329FB00CFBFEE /* Contacts.xcdatamodeld */,
+				A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */,
 			);
 			path = SwiftUIBasics;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 			files = (
 				A42D65482B8E448B00F996AA /* LaunchScreen.storyboard in Resources */,
 				A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */,
+				A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */,
 				A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */,
 				A47F9DA22BDFF6FF0057398D /* Maps.storyboard in Resources */,
 			);
@@ -436,6 +451,7 @@
 				A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */,
 				A42525E92BE53E5A00C10D0C /* PersonsView.swift in Sources */,
 				A43FA9B82C04EAE800E7F8D9 /* UserResponse.swift in Sources */,
+				A47493BC2C25E29900CF9281 /* AppDelegate.swift in Sources */,
 				A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */,
 				A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */,
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
