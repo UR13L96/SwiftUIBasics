@@ -32,6 +32,9 @@
 		A48157DF2C06340C00FCB379 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DE2C06340C00FCB379 /* UsersView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
+		A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */; };
+		A4BFDE692C29CC43001840B3 /* FirebaseRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE682C29CC43001840B3 /* FirebaseRegisterView.swift */; };
+		A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */; };
 		A4D25FB52BD2E42B00278358 /* MapMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB42BD2E42B00278358 /* MapMenuView.swift */; };
 		A4D25FB72BD2E47700278358 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB62BD2E47700278358 /* MapView.swift */; };
 		A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB82BD2E4A200278358 /* LocationView.swift */; };
@@ -84,6 +87,9 @@
 		A48157DE2C06340C00FCB379 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHomeView.swift; sourceTree = "<group>"; };
+		A4BFDE682C29CC43001840B3 /* FirebaseRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRegisterView.swift; sourceTree = "<group>"; };
+		A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginView.swift; sourceTree = "<group>"; };
 		A4D25FB42BD2E42B00278358 /* MapMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMenuView.swift; sourceTree = "<group>"; };
 		A4D25FB62BD2E47700278358 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A4D25FB82BD2E4A200278358 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
@@ -187,10 +193,9 @@
 		A43FA9B32C04E74800E7F8D9 /* APIsURLSession */ = {
 			isa = PBXGroup;
 			children = (
+				A4BFDE632C29CC0A001840B3 /* Views */,
 				A48157DB2C06304000FCB379 /* Utils */,
 				A43FA9B42C04E8D400E7F8D9 /* Models */,
-				A48157DE2C06340C00FCB379 /* UsersView.swift */,
-				A4213D982C0E1E9800C719DE /* LoginView.swift */,
 			);
 			path = APIsURLSession;
 			sourceTree = "<group>";
@@ -229,6 +234,33 @@
 				A4213D9A2C0E205100C719DE /* LoginRequest.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A4BFDE612C29CAD6001840B3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFDE642C29CC15001840B3 /* Views */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		A4BFDE632C29CC0A001840B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A48157DE2C06340C00FCB379 /* UsersView.swift */,
+				A4213D982C0E1E9800C719DE /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4BFDE642C29CC15001840B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */,
+				A4BFDE682C29CC43001840B3 /* FirebaseRegisterView.swift */,
+				A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A4D25FB12BD2E3FF00278358 /* Maps */ = {
@@ -271,7 +303,6 @@
 				A42FA3D72BB32C3800CFBFEE /* Models */,
 				A4FA0D3F2BB720360084AD1A /* Persistence.swift */,
 				A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */,
-				A4314D662BA9E99B008969CE /* MenuView.swift */,
 				A4E118682B87A97A0008E2AB /* Assets.xcassets */,
 				A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */,
 				A4E1186A2B87A97A0008E2AB /* Preview Content */,
@@ -306,11 +337,13 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4BFDE612C29CAD6001840B3 /* Firebase */,
 				A43FA9B32C04E74800E7F8D9 /* APIsURLSession */,
 				A4E91D562BE9311C0072C7F1 /* SwiftUIBasics */,
 				A42525E62BE53E3E00C10D0C /* Realm */,
 				A4D25FB12BD2E3FF00278358 /* Maps */,
 				A4F86AD22BC4449B001B5AF0 /* CoreDataImages */,
+				A4314D662BA9E99B008969CE /* MenuView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -457,11 +490,13 @@
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
+				A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */,
 				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
 				A4D25FB72BD2E47700278358 /* MapView.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */,
 				A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */,
+				A4BFDE692C29CC43001840B3 /* FirebaseRegisterView.swift in Sources */,
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,
 				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
@@ -477,6 +512,7 @@
 				A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */,
 				A4D25FB52BD2E42B00278358 /* MapMenuView.swift in Sources */,
 				A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */,
+				A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */,
 				A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */,
 				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
 				A4F86ADA2BC445C0001B5AF0 /* PlaceFormView.swift in Sources */,

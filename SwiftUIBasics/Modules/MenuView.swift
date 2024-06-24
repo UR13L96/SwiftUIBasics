@@ -18,7 +18,8 @@ struct MenuView: View {
         Topic(name: "Core Data & Images"),
         Topic(name: "Maps"),
         Topic(name: "Realm"),
-        Topic(name: "APIs URLSession")
+        Topic(name: "APIs URLSession"),
+        Topic(name: "Firebase")
     ]
     
     private func readDarkMode() {
@@ -60,6 +61,8 @@ struct MenuView: View {
             PersonsView()
         case 6:
             UsersView()
+        case 7:
+            FirebaseHomeView()
         default:
             ContentView().environmentObject(RandomNumber())
         }
