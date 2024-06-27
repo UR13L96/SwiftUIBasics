@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct FirebaseLoginView: View {
     @State private var email = ""
@@ -26,17 +27,34 @@ struct FirebaseLoginView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button(action: {
-                
+                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    if user != nil {
+                        print("Logged")
+                    } else {
+                        if let error = error?.localizedDescription {
+                            print("FirebaseAuth", error)
+                        }
+                    }
+                }
             }, label: {
                 Text("Login")
             })
             
             Button(action: {
-                
+                Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                    if user != nil {
+                        print("Registered")
+                    } else {
+                        if let error = error?.localizedDescription {
+                            print("FirebaseAuth", error)
+                        }
+                    }
+                    
+                }
             }, label: {
                 Text("Sign Up")
             })
-        }
+        }.padding(.all)
     }
 }
 

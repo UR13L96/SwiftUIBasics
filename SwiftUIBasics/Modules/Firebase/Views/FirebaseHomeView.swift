@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FirebaseHomeView: View {
-    @State private var loggedIn = false
+    @State private var logged = false
     
     var body: some View {
         Group {
-            if loggedIn {
+            if logged {
                 FirebaseRegisterView()
             } else {
-                FirebaseLoginView(logged: $loggedIn)
+                FirebaseLoginView(logged: $logged)
             }
         }
     }
