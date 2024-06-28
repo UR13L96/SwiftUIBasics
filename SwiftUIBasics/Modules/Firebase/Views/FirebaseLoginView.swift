@@ -29,7 +29,8 @@ struct FirebaseLoginView: View {
             Button(action: {
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     if user != nil {
-                        print("Logged")
+                        UserDefaults.standard.set(true, forKey: "FirebaseLogged")
+                        self.logged = true
                     } else {
                         if let error = error?.localizedDescription {
                             print("FirebaseAuth", error)

@@ -62,7 +62,7 @@ struct MenuView: View {
         case 6:
             UsersView()
         case 7:
-            FirebaseHomeView()
+            FirebaseContentView()
         default:
             ContentView().environmentObject(RandomNumber())
         }

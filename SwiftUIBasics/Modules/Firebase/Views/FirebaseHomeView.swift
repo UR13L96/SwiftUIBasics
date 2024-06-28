@@ -6,21 +6,35 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct FirebaseHomeView: View {
-    @State private var logged = false
+    @Binding var logged: Bool
     
     var body: some View {
-        Group {
-            if logged {
-                FirebaseRegisterView()
-            } else {
-                FirebaseLoginView(logged: $logged)
+        ZStack {
+            List {
+                ForEach(1..<10) { item in
+                    Text("Post \(item)")
+                }
             }
         }
+        .navigationTitle(Text("Home"))
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            Button {
+                try? Auth.auth().signOut()
+                logged = false
+                UserDefaults.standard.removeObject(forKey: "FirebaseLogged")
+            } label: {
+                Text("Salir")
+            }
+
+        })
+        
     }
 }
 
 #Preview {
-    FirebaseHomeView()
+    FirebaseHomeView(logged: .constant(false))
 }
