@@ -18,6 +18,25 @@ struct FirebaseHomeView: View {
                     Text("Post \(item)")
                 }
             }
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        print("AddClicked")
+                    } label: {
+                        Image(systemName: "plus")
+                            .font(.title)
+                            .frame(width: 56, height: 56)
+                            .foregroundStyle(Color.white)
+                            .background(Color.blue)
+                            .clipShape(Circle())
+                            .padding()
+                    }
+
+                }
+            }
         }
         .navigationTitle(Text("Home"))
         .navigationBarTitleDisplayMode(.inline)
