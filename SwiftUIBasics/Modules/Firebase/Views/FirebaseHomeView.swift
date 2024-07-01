@@ -10,6 +10,7 @@ import FirebaseAuth
 
 struct FirebaseHomeView: View {
     @Binding var logged: Bool
+    @State private var isPostFormVisible = false
     
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct FirebaseHomeView: View {
                 HStack {
                     Spacer()
                     Button {
-                        print("AddClicked")
+                        isPostFormVisible.toggle()
                     } label: {
                         Image(systemName: "plus")
                             .font(.title)
@@ -34,9 +35,11 @@ struct FirebaseHomeView: View {
                             .clipShape(Circle())
                             .padding()
                     }
-
                 }
             }
+            .sheet(isPresented: $isPostFormVisible, content: {
+                FirebasePostFormView(isVisible: $isPostFormVisible)
+            })
         }
         .navigationTitle(Text("Home"))
         .navigationBarTitleDisplayMode(.inline)

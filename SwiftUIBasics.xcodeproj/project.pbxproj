@@ -39,6 +39,7 @@
 		A4D25FB72BD2E47700278358 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB62BD2E47700278358 /* MapView.swift */; };
 		A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB82BD2E4A200278358 /* LocationView.swift */; };
 		A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FBA2BD2E51200278358 /* UIKitMapView.swift */; };
+		A4D5DD662C3306BA005C23DF /* FirebasePostFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5DD652C3306BA005C23DF /* FirebasePostFormView.swift */; };
 		A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */; };
 		A4E118672B87A9790008E2AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118662B87A9790008E2AB /* ContentView.swift */; };
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		A4D25FB62BD2E47700278358 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A4D25FB82BD2E4A200278358 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		A4D25FBA2BD2E51200278358 /* UIKitMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapView.swift; sourceTree = "<group>"; };
+		A4D5DD652C3306BA005C23DF /* FirebasePostFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePostFormView.swift; sourceTree = "<group>"; };
 		A4E118612B87A9790008E2AB /* SwiftUIBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBasicsApp.swift; sourceTree = "<group>"; };
 		A4E118662B87A9790008E2AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */,
 				A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */,
 				A447B3732C2F11BF00BF4BCE /* FirebaseContentView.swift */,
+				A4D5DD652C3306BA005C23DF /* FirebasePostFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
 				A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */,
+				A4D5DD662C3306BA005C23DF /* FirebasePostFormView.swift in Sources */,
 				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
 				A4D25FB72BD2E47700278358 /* MapView.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
