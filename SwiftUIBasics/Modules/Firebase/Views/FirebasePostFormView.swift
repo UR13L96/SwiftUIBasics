@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FirebasePostFormView: View {
     @Binding var isVisible: Bool
+    @State private var title: String = ""
+    @State private var text: String = ""
+    @State private var description: String = ""
     
     var body: some View {
         VStack {
@@ -26,9 +29,14 @@ struct FirebasePostFormView: View {
                 } label: {
                     Text("Post")
                 }
-
-            }.padding(.all)
-        }
+            }
+            
+            TextField("Title", text: $title)
+            
+            TextEditor(text: $description)
+                .border(.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .frame(height: 160)
+        }.padding(.all)
     }
 }
 
