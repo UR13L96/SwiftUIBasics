@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+import FirebaseAuth
 
 struct FirebasePostFormView: View {
     @Binding var isVisible: Bool
     @State private var title: String = ""
-    @State private var text: String = ""
     @State private var description: String = ""
+    
+    private func savePost() {
+        let db = Firestore.firestore()
+        guard let email = Auth.auth().currentUser?.email else { return }
+        let post: [String: Any] = [
+            "title": title,
+            "description": description,
+            "email": email
+        ]
+        
+        db.collection("posts").addDocument(data: post) { error in
+            if let error = error {
+                print("Firestore", error.localizedDescription)
+            }
+        }
+    }
     
     var body: some View {
         VStack {
@@ -25,7 +42,8 @@ struct FirebasePostFormView: View {
                 Spacer()
 
                 Button {
-                    
+                    savePost()
+                    isVisible.toggle()
                 } label: {
                     Text("Post")
                 }

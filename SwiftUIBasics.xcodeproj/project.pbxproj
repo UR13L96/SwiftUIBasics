@@ -33,6 +33,7 @@
 		A48157DF2C06340C00FCB379 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DE2C06340C00FCB379 /* UsersView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
+		A4A997342C36FD8500779F62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A997332C36FD8500779F62 /* Post.swift */; };
 		A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */; };
 		A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */; };
 		A4D25FB52BD2E42B00278358 /* MapMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB42BD2E42B00278358 /* MapMenuView.swift */; };
@@ -89,6 +90,7 @@
 		A48157DE2C06340C00FCB379 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A4A997332C36FD8500779F62 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHomeView.swift; sourceTree = "<group>"; };
 		A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginView.swift; sourceTree = "<group>"; };
 		A4D25FB42BD2E42B00278358 /* MapMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMenuView.swift; sourceTree = "<group>"; };
@@ -238,9 +240,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A4A997322C36FD7400779F62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4A997332C36FD8500779F62 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A4BFDE612C29CAD6001840B3 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				A4A997322C36FD7400779F62 /* Models */,
 				A4BFDE642C29CC15001840B3 /* Views */,
 			);
 			path = Firebase;
@@ -503,6 +514,7 @@
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,
 				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
+				A4A997342C36FD8500779F62 /* Post.swift in Sources */,
 				A4213D9B2C0E205100C719DE /* LoginRequest.swift in Sources */,
 				A447B3742C2F11BF00BF4BCE /* FirebaseContentView.swift in Sources */,
 				A4FA0D1F2BB717FE0084AD1A /* ContactDetailView.swift in Sources */,
