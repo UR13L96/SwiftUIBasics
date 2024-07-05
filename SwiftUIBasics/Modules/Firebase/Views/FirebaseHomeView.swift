@@ -7,17 +7,33 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct FirebaseHomeView: View {
     @Binding var logged: Bool
     @State private var isPostFormVisible = false
+    @ObservedObject var posts = GetPosts()
     
     var body: some View {
         ZStack {
             List {
-                ForEach(1..<10) { item in
-                    Text("Post \(item)")
-                }
+                ForEach(posts.posts) { post in
+                    VStack(alignment: .leading) {
+                        Text(post.title)
+                            .font(.title)
+                            .bold()
+                        
+                        Text(post.description)
+                    }
+                }.onDelete(perform: { indexSet in
+                    if let index = indexSet.first {
+                        let id = self.posts.posts[index].id
+                        let db = Firestore.firestore()
+                        
+                        db.collection("posts").document(id).delete()
+                        posts.posts.remove(atOffsets: indexSet)
+                    }
+                })
             }
             
             VStack {
