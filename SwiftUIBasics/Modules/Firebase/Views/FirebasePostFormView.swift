@@ -14,7 +14,32 @@ struct FirebasePostFormView: View {
     @State private var title: String = ""
     @State private var description: String = ""
     
+    @Binding var post: Post?
+    
     private func savePost() {
+        if post == nil {
+            createNewPost()
+        } else {
+            updatePost()
+        }
+    }
+    
+    private func updatePost() {
+        guard let postId = post?.id else { return }
+        let db = Firestore.firestore()
+        let fields: [String: Any] = [
+            "title": title,
+            "description": description
+        ]
+        
+        db.collection("posts").document(postId).updateData(fields) { error in
+            if let error = error {
+                print("Firestore:", error.localizedDescription)
+            }
+        }
+    }
+    
+    private func createNewPost() {
         let db = Firestore.firestore()
         guard let email = Auth.auth().currentUser?.email else { return }
         let post: [String: Any] = [
@@ -34,6 +59,7 @@ struct FirebasePostFormView: View {
         VStack {
             HStack {
                 Button {
+                    post = nil
                     isVisible.toggle()
                 } label: {
                     Text("Cancel")
@@ -43,9 +69,10 @@ struct FirebasePostFormView: View {
 
                 Button {
                     savePost()
+                    post = nil
                     isVisible.toggle()
                 } label: {
-                    Text("Post")
+                    Text(post == nil ? "Post" : "Update")
                 }
             }
             
@@ -54,10 +81,17 @@ struct FirebasePostFormView: View {
             TextEditor(text: $description)
                 .border(.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .frame(height: 160)
-        }.padding(.all)
+        }
+        .padding(.all)
+        .onAppear {
+            if let post = post {
+                title = post.title
+                description = post.description
+            }
+        }
     }
 }
 
 #Preview {
-    FirebasePostFormView(isVisible: .constant(false))
+    FirebasePostFormView(isVisible: .constant(false), post: .constant(nil))
 }

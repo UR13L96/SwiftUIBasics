@@ -13,6 +13,7 @@ struct FirebaseHomeView: View {
     @Binding var logged: Bool
     @State private var isPostFormVisible = false
     @ObservedObject var posts = GetPosts()
+    @State private var updatingPost: Post?
     
     var body: some View {
         ZStack {
@@ -24,6 +25,9 @@ struct FirebaseHomeView: View {
                             .bold()
                         
                         Text(post.description)
+                    }.onTapGesture {
+                        updatingPost = post
+                        isPostFormVisible.toggle()
                     }
                 }.onDelete(perform: { indexSet in
                     if let index = indexSet.first {
@@ -54,7 +58,7 @@ struct FirebaseHomeView: View {
                 }
             }
             .sheet(isPresented: $isPostFormVisible, content: {
-                FirebasePostFormView(isVisible: $isPostFormVisible)
+                FirebasePostFormView(isVisible: $isPostFormVisible, post: $updatingPost)
             })
         }
         .navigationTitle(Text("Home"))
