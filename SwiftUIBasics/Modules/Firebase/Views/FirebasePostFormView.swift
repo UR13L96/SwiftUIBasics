@@ -8,12 +8,18 @@
 import SwiftUI
 import FirebaseFirestore
 import FirebaseAuth
+import PhotosUI
 
 struct FirebasePostFormView: View {
     @Binding var isVisible: Bool
     @State private var title: String = ""
     @State private var description: String = ""
-    
+    @State private var photosPicker: PhotosPickerItem?
+    @State private var isSourceMenuVisible = false
+    @State private var isPhotosPickerVisible = false
+    @State private var selectedImage: Image?
+    @State private var imageData: Data?
+
     @Binding var post: Post?
     
     private func savePost() {
@@ -81,12 +87,48 @@ struct FirebasePostFormView: View {
             TextEditor(text: $description)
                 .border(.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .frame(height: 160)
+            
+            selectedImage?
+                .resizable()
+                .frame(width: 250, height: 250)
+                .clipShape(.rect(cornerRadius: 16))
+            
+            Button {
+                isSourceMenuVisible = true
+            } label: {
+                Text("Load image")
+            }
+            .confirmationDialog("Menu", isPresented: $isSourceMenuVisible) {
+                Button("Gallery", action: {
+                    isPhotosPickerVisible = true
+                })
+                Button("Camera", action: {
+                    print("Camera selected")
+                })
+                Button(role: .cancel, action: {}) {
+                    Text("Cancel")
+                }
+            } message: {
+                Text("Select an option")
+            }
+            .photosPicker(isPresented: $isPhotosPickerVisible, selection: $photosPicker)
         }
         .padding(.all)
         .onAppear {
             if let post = post {
                 title = post.title
                 description = post.description
+            }
+        }
+        .onChange(of: photosPicker) {
+            Task {
+                if let loaded = try? await photosPicker?.loadTransferable(type: Image.self) {
+                    selectedImage = loaded
+                }
+                
+                if let loaded = try? await photosPicker?.loadTransferable(type: Data.self) {
+                    imageData = loaded
+                }
             }
         }
     }
