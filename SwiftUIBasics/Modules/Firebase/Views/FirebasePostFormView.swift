@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseStorage
 import PhotosUI
 
 struct FirebasePostFormView: View {
@@ -22,9 +23,9 @@ struct FirebasePostFormView: View {
 
     @Binding var post: Post?
     
-    private func savePost() {
+    private func savePost(imageDirectory: String) {
         if post == nil {
-            createNewPost()
+            createNewPost(imageDirectory: imageDirectory)
         } else {
             updatePost()
         }
@@ -45,19 +46,38 @@ struct FirebasePostFormView: View {
         }
     }
     
-    private func createNewPost() {
+    private func createNewPost(imageDirectory: String) {
         let db = Firestore.firestore()
         guard let email = Auth.auth().currentUser?.email else { return }
         let post: [String: Any] = [
             "title": title,
             "description": description,
-            "email": email
+            "email": email,
+            "image": imageDirectory
         ]
         
         db.collection("posts").addDocument(data: post) { error in
             if let error = error {
                 print("Firestore", error.localizedDescription)
             }
+        }
+    }
+    
+    private func saveImage() {
+        guard let data = imageData else { return }
+        let storage = Storage.storage().reference()
+        let imageName = UUID().uuidString
+        let directory = storage.child("posts/\(imageName)")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"
+        
+        directory.putData(data, metadata: metadata) { (data, error) in
+            if let error = error {
+                print("Storage", error.localizedDescription)
+                return
+            }
+            
+            savePost(imageDirectory: String(describing: directory))
         }
     }
     
@@ -74,7 +94,7 @@ struct FirebasePostFormView: View {
                 Spacer()
 
                 Button {
-                    savePost()
+                    saveImage()
                     post = nil
                     isVisible.toggle()
                 } label: {
@@ -127,7 +147,8 @@ struct FirebasePostFormView: View {
                 }
                 
                 if let loaded = try? await photosPicker?.loadTransferable(type: Data.self) {
-                    imageData = loaded
+                    let image = UIImage(data: loaded)
+                    imageData = image?.jpegData(compressionQuality: 0.1)
                 }
             }
         }

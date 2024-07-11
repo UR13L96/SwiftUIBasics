@@ -12,4 +12,5 @@ struct Post: Identifiable {
     let title: String
     let description: String
     let email: String
+    let image: String
 }

@@ -27,7 +27,8 @@ class GetPosts: ObservableObject {
                         id: document.documentID,
                         title: data["title"] as? String ?? "Title not found",
                         description: data["description"] as? String ?? "Description not found",
-                        email: data["email"] as? String ?? "Email not found"
+                        email: data["email"] as? String ?? "Email not found", 
+                        image: data["image"] as? String ?? "Image not found"
                     )
                     
                     DispatchQueue.main.async {
