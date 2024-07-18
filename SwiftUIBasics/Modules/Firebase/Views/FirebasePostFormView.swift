@@ -42,6 +42,7 @@ struct FirebasePostFormView: View {
         db.collection("posts").document(postId).updateData(fields) { error in
             if let error = error {
                 print("Firestore:", error.localizedDescription)
+                return
             }
         }
     }
@@ -59,7 +60,10 @@ struct FirebasePostFormView: View {
         db.collection("posts").addDocument(data: post) { error in
             if let error = error {
                 print("Firestore", error.localizedDescription)
+                return
             }
+            
+            isVisible.toggle()
         }
     }
     
@@ -96,7 +100,6 @@ struct FirebasePostFormView: View {
                 Button {
                     saveImage()
                     post = nil
-                    isVisible.toggle()
                 } label: {
                     Text(post == nil ? "Post" : "Update")
                 }

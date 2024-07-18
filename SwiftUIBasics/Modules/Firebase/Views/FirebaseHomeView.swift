@@ -25,6 +25,8 @@ struct FirebaseHomeView: View {
                             .bold()
                         
                         Text(post.description)
+                        
+                        FirebaseImageView(imageURL: post.image)
                     }.onTapGesture {
                         updatingPost = post
                         isPostFormVisible.toggle()
