@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuView: View {
     @State private var mode: ColorScheme = .dark
     @State private var darkModeEnabled: Bool = true
+    @State private var isNotificationShow: Bool = false
     
     let topics: [Topic] = [
         Topic(name: "SwiftUI Basics"),
@@ -19,7 +20,8 @@ struct MenuView: View {
         Topic(name: "Maps"),
         Topic(name: "Realm"),
         Topic(name: "APIs URLSession"),
-        Topic(name: "Firebase")
+        Topic(name: "Firebase"),
+        Topic(name: "LocalNotifications")
     ]
     
     private func readDarkMode() {
@@ -38,8 +40,15 @@ struct MenuView: View {
             }
             .navigationTitle("iOS 13 App Development")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(isPresented: $isNotificationShow, destination: {
+                HelloNotificationsView()
+            })
             .onAppear(perform: {
                 readDarkMode()
+                
+                NotificationCenter.default.addObserver(forName: NSNotification.Name("notification.action.one"), object: nil, queue: .main) { _ in
+                    isNotificationShow.toggle()
+                }
             })
         }.environment(\.colorScheme, mode)
     }
@@ -63,6 +72,8 @@ struct MenuView: View {
             UsersView()
         case 7:
             FirebaseContentView()
+        case 8:
+            LocalNotificationsView()
         default:
             ContentView().environmentObject(RandomNumber())
         }

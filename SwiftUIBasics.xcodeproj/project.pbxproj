@@ -34,8 +34,11 @@
 		A47F9DA72BDFFA1D0057398D /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */; };
 		A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DC2C06304A00FCB379 /* NetworkManager.swift */; };
 		A48157DF2C06340C00FCB379 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DE2C06340C00FCB379 /* UsersView.swift */; };
+		A484DA9C2D35740B00CA274F /* HelloNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DA9B2D35740B00CA274F /* HelloNotificationsView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
+		A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */; };
+		A4A950362D344CC100C2C668 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A4A950352D344CC100C2C668 /* cat.jpeg */; };
 		A4A997342C36FD8500779F62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A997332C36FD8500779F62 /* Post.swift */; };
 		A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */; };
 		A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */; };
@@ -94,8 +97,11 @@
 		A47F9DA62BDFFA1D0057398D /* CoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
 		A48157DC2C06304A00FCB379 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A48157DE2C06340C00FCB379 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		A484DA9B2D35740B00CA274F /* HelloNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloNotificationsView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
+		A4A950352D344CC100C2C668 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
 		A4A997332C36FD8500779F62 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A4BFDE662C29CC2F001840B3 /* FirebaseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHomeView.swift; sourceTree = "<group>"; };
 		A4BFDE6A2C29CED2001840B3 /* FirebaseLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginView.swift; sourceTree = "<group>"; };
@@ -254,6 +260,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A4A9502F2D33260100C2C668 /* LocalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */,
+				A484DA9B2D35740B00CA274F /* HelloNotificationsView.swift */,
+			);
+			path = LocalNotifications;
+			sourceTree = "<group>";
+		};
+		A4A950342D344CAA00C2C668 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A4A950352D344CC100C2C668 /* cat.jpeg */,
+				A4E118682B87A97A0008E2AB /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A4A997322C36FD7400779F62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,13 +352,13 @@
 		A4E118632B87A9790008E2AB /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
+				A4A950342D344CAA00C2C668 /* Assets */,
 				A47493BA2C25E28700CF9281 /* SupportingFiles */,
 				A4F86AD12BC44494001B5AF0 /* Modules */,
 				A42953782BB5CF9C000F0D60 /* Views */,
 				A42FA3D72BB32C3800CFBFEE /* Models */,
 				A4FA0D3F2BB720360084AD1A /* Persistence.swift */,
 				A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */,
-				A4E118682B87A97A0008E2AB /* Assets.xcassets */,
 				A42D65472B8E448B00F996AA /* LaunchScreen.storyboard */,
 				A4E1186A2B87A97A0008E2AB /* Preview Content */,
 				A4F2562C2B9236A200DC8791 /* Song.swift */,
@@ -368,6 +392,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4A9502F2D33260100C2C668 /* LocalNotifications */,
 				A4BFDE612C29CAD6001840B3 /* Firebase */,
 				A43FA9B32C04E74800E7F8D9 /* APIsURLSession */,
 				A4E91D562BE9311C0072C7F1 /* SwiftUIBasics */,
@@ -452,6 +477,7 @@
 			files = (
 				A42D65482B8E448B00F996AA /* LaunchScreen.storyboard in Resources */,
 				A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */,
+				A4A950362D344CC100C2C668 /* cat.jpeg in Resources */,
 				A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */,
 				A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */,
 				A47F9DA22BDFF6FF0057398D /* Maps.storyboard in Resources */,
@@ -525,6 +551,7 @@
 				A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */,
 				A4D5DD662C3306BA005C23DF /* FirebasePostFormView.swift in Sources */,
 				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
+				A484DA9C2D35740B00CA274F /* HelloNotificationsView.swift in Sources */,
 				A4D25FB72BD2E47700278358 /* MapView.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
 				A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */,
@@ -547,6 +574,7 @@
 				A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */,
 				A4D25FB52BD2E42B00278358 /* MapMenuView.swift in Sources */,
 				A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */,
+				A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */,
 				A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */,
 				A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */,
 				A4568AD32C49798400C11DE8 /* FirebaseImageView.swift in Sources */,
