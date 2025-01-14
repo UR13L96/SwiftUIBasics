@@ -35,6 +35,10 @@
 		A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DC2C06304A00FCB379 /* NetworkManager.swift */; };
 		A48157DF2C06340C00FCB379 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48157DE2C06340C00FCB379 /* UsersView.swift */; };
 		A484DA9C2D35740B00CA274F /* HelloNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DA9B2D35740B00CA274F /* HelloNotificationsView.swift */; };
+		A484DA9F2D36F77C00CA274F /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DA9E2D36F77C00CA274F /* AnimationsView.swift */; };
+		A484DAA22D3717CF00CA274F /* BasicAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */; };
+		A484DAA42D3717E700CA274F /* TransformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA32D3717E700CA274F /* TransformationsView.swift */; };
+		A484DAA62D37180B00CA274F /* ScalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA52D37180B00CA274F /* ScalesView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
 		A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */; };
@@ -98,6 +102,10 @@
 		A48157DC2C06304A00FCB379 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A48157DE2C06340C00FCB379 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		A484DA9B2D35740B00CA274F /* HelloNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloNotificationsView.swift; sourceTree = "<group>"; };
+		A484DA9E2D36F77C00CA274F /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
+		A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimationsView.swift; sourceTree = "<group>"; };
+		A484DAA32D3717E700CA274F /* TransformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsView.swift; sourceTree = "<group>"; };
+		A484DAA52D37180B00CA274F /* ScalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
@@ -260,6 +268,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A484DA9D2D36F76E00CA274F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A484DAA02D3717B300CA274F /* Views */,
+				A484DA9E2D36F77C00CA274F /* AnimationsView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		A484DAA02D3717B300CA274F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */,
+				A484DAA32D3717E700CA274F /* TransformationsView.swift */,
+				A484DAA52D37180B00CA274F /* ScalesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A4A9502F2D33260100C2C668 /* LocalNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +419,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A484DA9D2D36F76E00CA274F /* Animations */,
 				A4A9502F2D33260100C2C668 /* LocalNotifications */,
 				A4BFDE612C29CAD6001840B3 /* Firebase */,
 				A43FA9B32C04E74800E7F8D9 /* APIsURLSession */,
@@ -534,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A470C91C2BF7B45600AF0F4D /* PetsView.swift in Sources */,
+				A484DAA42D3717E700CA274F /* TransformationsView.swift in Sources */,
 				A4F86ADC2BC445F1001B5AF0 /* PlacesNavigationBarView.swift in Sources */,
 				A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */,
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
@@ -549,6 +578,7 @@
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
 				A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */,
+				A484DAA22D3717CF00CA274F /* BasicAnimationsView.swift in Sources */,
 				A4D5DD662C3306BA005C23DF /* FirebasePostFormView.swift in Sources */,
 				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
 				A484DA9C2D35740B00CA274F /* HelloNotificationsView.swift in Sources */,
@@ -576,6 +606,8 @@
 				A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */,
 				A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */,
 				A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */,
+				A484DAA62D37180B00CA274F /* ScalesView.swift in Sources */,
+				A484DA9F2D36F77C00CA274F /* AnimationsView.swift in Sources */,
 				A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */,
 				A4568AD32C49798400C11DE8 /* FirebaseImageView.swift in Sources */,
 				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
