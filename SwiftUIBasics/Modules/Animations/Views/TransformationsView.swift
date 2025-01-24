@@ -11,6 +11,7 @@ struct TransformationsView: View {
     @State private var color = Color.blue
     @State private var radius: CGFloat = 0
     @State private var scale: CGFloat = 1
+    @State private var rotation: Double = 0.0
     
     var body: some View {
         VStack {
@@ -48,6 +49,23 @@ struct TransformationsView: View {
             }.onAppear {
                 scale = 2
             }
+            
+            Spacer()
+            
+            Button {
+                withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                    rotation += 360
+                }
+            } label: {
+                Text("Rotate")
+                    .foregroundStyle(Color.white)
+                    .font(.title)
+                    .frame(width: 100, height: 100)
+                    .background(color)
+                    .clipShape(Circle())
+            }.rotation3DEffect(.degrees(rotation), axis: (x: 0, y: 1, z: 0.0))
+            
+            Spacer()
         }
     }
 }
