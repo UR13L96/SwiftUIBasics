@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41BA36B2D441BBE0090C02F /* TransitionsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BA36A2D441BBE0090C02F /* TransitionsInfoView.swift */; };
 		A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4213D982C0E1E9800C719DE /* LoginView.swift */; };
 		A4213D9B2C0E205100C719DE /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4213D9A2C0E205100C719DE /* LoginRequest.swift */; };
 		A42525E52BE53CE200C10D0C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42525E42BE53CE200C10D0C /* Person.swift */; };
@@ -38,7 +39,7 @@
 		A484DA9F2D36F77C00CA274F /* AnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DA9E2D36F77C00CA274F /* AnimationsView.swift */; };
 		A484DAA22D3717CF00CA274F /* BasicAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */; };
 		A484DAA42D3717E700CA274F /* TransformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA32D3717E700CA274F /* TransformationsView.swift */; };
-		A484DAA62D37180B00CA274F /* ScalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA52D37180B00CA274F /* ScalesView.swift */; };
+		A484DAA62D37180B00CA274F /* TransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA52D37180B00CA274F /* TransitionsView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
 		A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		140080071B7783E4CE3D9886 /* Pods-SwiftUIBasics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.release.xcconfig"; sourceTree = "<group>"; };
 		3E01706226CE52E4B36776FD /* Pods-SwiftUIBasics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIBasics.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIBasics/Pods-SwiftUIBasics.debug.xcconfig"; sourceTree = "<group>"; };
+		A41BA36A2D441BBE0090C02F /* TransitionsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsInfoView.swift; sourceTree = "<group>"; };
 		A4213D982C0E1E9800C719DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A4213D9A2C0E205100C719DE /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		A42525E42BE53CE200C10D0C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 		A484DA9E2D36F77C00CA274F /* AnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsView.swift; sourceTree = "<group>"; };
 		A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimationsView.swift; sourceTree = "<group>"; };
 		A484DAA32D3717E700CA274F /* TransformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsView.swift; sourceTree = "<group>"; };
-		A484DAA52D37180B00CA274F /* ScalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesView.swift; sourceTree = "<group>"; };
+		A484DAA52D37180B00CA274F /* TransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
@@ -282,7 +284,8 @@
 			children = (
 				A484DAA12D3717CF00CA274F /* BasicAnimationsView.swift */,
 				A484DAA32D3717E700CA274F /* TransformationsView.swift */,
-				A484DAA52D37180B00CA274F /* ScalesView.swift */,
+				A484DAA52D37180B00CA274F /* TransitionsView.swift */,
+				A41BA36A2D441BBE0090C02F /* TransitionsInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
 				A44E4BF12C38509500766516 /* GetPosts.swift in Sources */,
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
+				A41BA36B2D441BBE0090C02F /* TransitionsInfoView.swift in Sources */,
 				A42FA3D62BB329FB00CFBFEE /* Contacts.xcdatamodeld in Sources */,
 				A4BFDE672C29CC2F001840B3 /* FirebaseHomeView.swift in Sources */,
 				A484DAA22D3717CF00CA274F /* BasicAnimationsView.swift in Sources */,
@@ -606,7 +610,7 @@
 				A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */,
 				A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */,
 				A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */,
-				A484DAA62D37180B00CA274F /* ScalesView.swift in Sources */,
+				A484DAA62D37180B00CA274F /* TransitionsView.swift in Sources */,
 				A484DA9F2D36F77C00CA274F /* AnimationsView.swift in Sources */,
 				A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */,
 				A4568AD32C49798400C11DE8 /* FirebaseImageView.swift in Sources */,

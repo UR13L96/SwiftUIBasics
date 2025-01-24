@@ -18,8 +18,8 @@ struct AnimationsView: View {
                 Text("Transformations")
             }
             
-            ScalesView().tabItem {
-                Text("Scales")
+            TransitionsView().tabItem {
+                Text("Transitions")
             }
         }
     }
