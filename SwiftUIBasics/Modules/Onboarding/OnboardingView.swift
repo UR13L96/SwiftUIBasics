@@ -9,46 +9,68 @@ import SwiftUI
 
 struct OnboardingView: View {
     @State private var currentPage = 0
+    @State private var skipOnboarding = false
     
     var body: some View {
-        VStack {
-            ZStack {
-                switch currentPage {
-                case 0:
-                    OnboardingOne()
-                case 1:
-                    OnboardingTwo()
-                default:
-                    OnboardingThree()
-                }
-            }
-            
-            PageControl(currentPage: currentPage)
-            
-            HStack {
-                Button {
-                    if currentPage > 0 {
-                        currentPage -= 1
+        Group {
+            if skipOnboarding {
+                OnboardingHome()
+            } else {
+                VStack {
+                    ZStack {
+                        switch currentPage {
+                        case 0:
+                            OnboardingOne()
+                        case 1:
+                            OnboardingTwo()
+                        default:
+                            OnboardingThree()
+                        }
                     }
-                } label: {
-                    Image(systemName: "chevron.left.circle")
-                        .foregroundStyle(Color.blue)
-                        .font(.title)
-                }
+                    
+                    PageControl(currentPage: currentPage)
+                    
+                    HStack {
+                        Button {
+                            if currentPage > 0 {
+                                currentPage -= 1
+                            }
+                        } label: {
+                            Image(systemName: "chevron.left.circle")
+                                .foregroundStyle(Color.blue)
+                                .font(.title)
+                        }
 
-                Button {
-                    if currentPage < 3 {
-                        currentPage += 1
+                        Button {
+                            if currentPage < 3 {
+                                currentPage += 1
+                            }
+                        } label: {
+                            Image(systemName: "chevron.right.circle")
+                                .foregroundStyle(Color.blue)
+                                .font(.title)
+                        }
                     }
-                } label: {
-                    Image(systemName: "chevron.right.circle")
-                        .foregroundStyle(Color.blue)
-                        .font(.title)
+                    
+                    if currentPage == 2 {
+                        Button {
+                            self.skipOnboarding.toggle()
+                            UserDefaults.standard.set(true, forKey: "Onboarding.SkipOnboarding")
+                        } label: {
+                            Text("Continue")
+                        }
+                    }
+
                 }
+                .padding(.all)
+                .animation(.default, value: currentPage)
             }
         }
-        .padding(.all)
-        .animation(.default, value: currentPage)
+        .onAppear {
+            if UserDefaults.standard.object(forKey: "Onboarding.SkipOnboarding") != nil {
+                skipOnboarding.toggle()
+            }
+        }
     }
 }
 
