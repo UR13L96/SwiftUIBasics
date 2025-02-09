@@ -22,7 +22,8 @@ struct MenuView: View {
         Topic(name: "APIs URLSession"),
         Topic(name: "Firebase"),
         Topic(name: "LocalNotifications"),
-        Topic(name: "Animations")
+        Topic(name: "Animations"),
+        Topic(name: "Onboarding")
     ]
     
     private func readDarkMode() {
@@ -77,6 +78,8 @@ struct MenuView: View {
             LocalNotificationsView()
         case 9:
             AnimationsView()
+        case 10:
+            OnboardingView()
         default:
             ContentView().environmentObject(RandomNumber())
         }

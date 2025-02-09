@@ -23,6 +23,11 @@
 		A43215612B9A16EB008F4124 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43215602B9A16EB008F4124 /* CounterView.swift */; };
 		A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FA9B52C04E8E100E7F8D9 /* BaseResponse.swift */; };
 		A43FA9B82C04EAE800E7F8D9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43FA9B72C04EAE800E7F8D9 /* UserResponse.swift */; };
+		A443C6D22D558C9400B5E145 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D12D558C9400B5E145 /* OnboardingView.swift */; };
+		A443C6D52D5591CC00B5E145 /* OnboardingOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D42D5591CC00B5E145 /* OnboardingOne.swift */; };
+		A443C6D72D5591D600B5E145 /* OnboardingTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D62D5591D600B5E145 /* OnboardingTwo.swift */; };
+		A443C6DA2D5591E300B5E145 /* OnboardingThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D92D5591E300B5E145 /* OnboardingThree.swift */; };
+		A443C6DC2D55920F00B5E145 /* OnboardingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6DB2D55920F00B5E145 /* OnboardingHome.swift */; };
 		A447B3742C2F11BF00BF4BCE /* FirebaseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B3732C2F11BF00BF4BCE /* FirebaseContentView.swift */; };
 		A44E4BF12C38509500766516 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E4BF02C38509500766516 /* GetPosts.swift */; };
 		A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */; };
@@ -90,6 +95,11 @@
 		A43215602B9A16EB008F4124 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A43FA9B52C04E8E100E7F8D9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		A43FA9B72C04EAE800E7F8D9 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		A443C6D12D558C9400B5E145 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A443C6D42D5591CC00B5E145 /* OnboardingOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOne.swift; sourceTree = "<group>"; };
+		A443C6D62D5591D600B5E145 /* OnboardingTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwo.swift; sourceTree = "<group>"; };
+		A443C6D92D5591E300B5E145 /* OnboardingThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThree.swift; sourceTree = "<group>"; };
+		A443C6DB2D55920F00B5E145 /* OnboardingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHome.swift; sourceTree = "<group>"; };
 		A447B3732C2F11BF00BF4BCE /* FirebaseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseContentView.swift; sourceTree = "<group>"; };
 		A44E4BF02C38509500766516 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
@@ -234,6 +244,26 @@
 				A4A862792C0F6FBD003196DB /* LoginResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A443C6D02D558C8400B5E145 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A443C6D32D5591B500B5E145 /* Views */,
+				A443C6D12D558C9400B5E145 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A443C6D32D5591B500B5E145 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A443C6D42D5591CC00B5E145 /* OnboardingOne.swift */,
+				A443C6D62D5591D600B5E145 /* OnboardingTwo.swift */,
+				A443C6D92D5591E300B5E145 /* OnboardingThree.swift */,
+				A443C6DB2D55920F00B5E145 /* OnboardingHome.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A4568AD12C49797700C11DE8 /* Utils */ = {
@@ -422,6 +452,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A443C6D02D558C8400B5E145 /* Onboarding */,
 				A484DA9D2D36F76E00CA274F /* Animations */,
 				A4A9502F2D33260100C2C668 /* LocalNotifications */,
 				A4BFDE612C29CAD6001840B3 /* Firebase */,
@@ -575,8 +606,11 @@
 				A43FA9B82C04EAE800E7F8D9 /* UserResponse.swift in Sources */,
 				A47493BC2C25E29900CF9281 /* AppDelegate.swift in Sources */,
 				A428B1122B96266D00BA62CA /* RandomNumber.swift in Sources */,
+				A443C6DC2D55920F00B5E145 /* OnboardingHome.swift in Sources */,
 				A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */,
 				A42953772BB5CF86000F0D60 /* ContactsView.swift in Sources */,
+				A443C6DA2D5591E300B5E145 /* OnboardingThree.swift in Sources */,
+				A443C6D22D558C9400B5E145 /* OnboardingView.swift in Sources */,
 				A44E4BF12C38509500766516 /* GetPosts.swift in Sources */,
 				A4F2562D2B9236A200DC8791 /* Song.swift in Sources */,
 				A41BA36B2D441BBE0090C02F /* TransitionsInfoView.swift in Sources */,
@@ -592,6 +626,7 @@
 				A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */,
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,
 				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
+				A443C6D72D5591D600B5E145 /* OnboardingTwo.swift in Sources */,
 				A42FA3D92BB32C4D00CFBFEE /* Contact.swift in Sources */,
 				A4A997342C36FD8500779F62 /* Post.swift in Sources */,
 				A4213D9B2C0E205100C719DE /* LoginRequest.swift in Sources */,
@@ -615,6 +650,7 @@
 				A43FA9B62C04E8E100E7F8D9 /* BaseResponse.swift in Sources */,
 				A4568AD32C49798400C11DE8 /* FirebaseImageView.swift in Sources */,
 				A4314D692BA9EBA2008969CE /* Topic.swift in Sources */,
+				A443C6D52D5591CC00B5E145 /* OnboardingOne.swift in Sources */,
 				A4F86ADA2BC445C0001B5AF0 /* PlaceFormView.swift in Sources */,
 				A429537A2BB5CFD1000F0D60 /* ContactFormView.swift in Sources */,
 				A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */,
