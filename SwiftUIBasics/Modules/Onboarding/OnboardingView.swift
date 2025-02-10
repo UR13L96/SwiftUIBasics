@@ -17,6 +17,8 @@ struct OnboardingView: View {
                 OnboardingHome()
             } else {
                 VStack {
+                    Spacer()
+                    
                     ZStack {
                         switch currentPage {
                         case 0:
@@ -27,6 +29,8 @@ struct OnboardingView: View {
                             OnboardingThree()
                         }
                     }
+                    
+                    Spacer()
                     
                     PageControl(currentPage: currentPage)
                     
@@ -64,6 +68,21 @@ struct OnboardingView: View {
                 }
                 .padding(.all)
                 .animation(.default, value: currentPage)
+                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onEnded({ value in
+                        if value.translation.width < 0 {
+                            if currentPage < 3 {
+                                currentPage += 1
+                            }
+                        }
+                        
+                        if value.translation.width > 0 {
+                            if currentPage > 0 {
+                                currentPage -= 1
+                            }
+                        }
+                    })
+                )
             }
         }
         .onAppear {
