@@ -28,6 +28,7 @@
 		A443C6D72D5591D600B5E145 /* OnboardingTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D62D5591D600B5E145 /* OnboardingTwo.swift */; };
 		A443C6DA2D5591E300B5E145 /* OnboardingThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6D92D5591E300B5E145 /* OnboardingThree.swift */; };
 		A443C6DC2D55920F00B5E145 /* OnboardingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6DB2D55920F00B5E145 /* OnboardingHome.swift */; };
+		A443C6DF2D5AA41D00B5E145 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A443C6DE2D5AA41D00B5E145 /* ChartsView.swift */; };
 		A447B3742C2F11BF00BF4BCE /* FirebaseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A447B3732C2F11BF00BF4BCE /* FirebaseContentView.swift */; };
 		A44E4BF12C38509500766516 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E4BF02C38509500766516 /* GetPosts.swift */; };
 		A453FDEF2B9B710000BC02BC /* SecondCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */; };
@@ -46,6 +47,7 @@
 		A484DAA42D3717E700CA274F /* TransformationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA32D3717E700CA274F /* TransformationsView.swift */; };
 		A484DAA62D37180B00CA274F /* TransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484DAA52D37180B00CA274F /* TransitionsView.swift */; };
 		A49139612BAB363900C7D701 /* DarkModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49139602BAB363900C7D701 /* DarkModeView.swift */; };
+		A4A7AF2A2D5BCEEA00B33034 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A7AF292D5BCEEA00B33034 /* BarView.swift */; };
 		A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A862792C0F6FBD003196DB /* LoginResponse.swift */; };
 		A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */; };
 		A4A950362D344CC100C2C668 /* cat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A4A950352D344CC100C2C668 /* cat.jpeg */; };
@@ -57,6 +59,7 @@
 		A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FB82BD2E4A200278358 /* LocationView.swift */; };
 		A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D25FBA2BD2E51200278358 /* UIKitMapView.swift */; };
 		A4D5DD662C3306BA005C23DF /* FirebasePostFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D5DD652C3306BA005C23DF /* FirebasePostFormView.swift */; };
+		A4D634212D5D0FDD00E33B4C /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D634202D5D0FDD00E33B4C /* ChartData.swift */; };
 		A4E118652B87A9790008E2AB /* SwiftUIBasicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */; };
 		A4E118672B87A9790008E2AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E118662B87A9790008E2AB /* ContentView.swift */; };
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
@@ -100,6 +103,7 @@
 		A443C6D62D5591D600B5E145 /* OnboardingTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwo.swift; sourceTree = "<group>"; };
 		A443C6D92D5591E300B5E145 /* OnboardingThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThree.swift; sourceTree = "<group>"; };
 		A443C6DB2D55920F00B5E145 /* OnboardingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHome.swift; sourceTree = "<group>"; };
+		A443C6DE2D5AA41D00B5E145 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		A447B3732C2F11BF00BF4BCE /* FirebaseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseContentView.swift; sourceTree = "<group>"; };
 		A44E4BF02C38509500766516 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
 		A453FDEE2B9B710000BC02BC /* SecondCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCounterView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		A484DAA32D3717E700CA274F /* TransformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsView.swift; sourceTree = "<group>"; };
 		A484DAA52D37180B00CA274F /* TransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
+		A4A7AF292D5BCEEA00B33034 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
 		A4A950352D344CC100C2C668 /* cat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpeg; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 		A4D25FB82BD2E4A200278358 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		A4D25FBA2BD2E51200278358 /* UIKitMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMapView.swift; sourceTree = "<group>"; };
 		A4D5DD652C3306BA005C23DF /* FirebasePostFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePostFormView.swift; sourceTree = "<group>"; };
+		A4D634202D5D0FDD00E33B4C /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		A4E118612B87A9790008E2AB /* SwiftUIBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E118642B87A9790008E2AB /* SwiftUIBasicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBasicsApp.swift; sourceTree = "<group>"; };
 		A4E118662B87A9790008E2AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -266,6 +272,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A443C6DD2D5AA40700B5E145 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				A4D6341F2D5D0FCD00E33B4C /* Models */,
+				A4A7AF282D5BCECF00B33034 /* Components */,
+				A443C6DE2D5AA41D00B5E145 /* ChartsView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		A4568AD12C49797700C11DE8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +334,14 @@
 				A41BA36A2D441BBE0090C02F /* TransitionsInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A4A7AF282D5BCECF00B33034 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A4A7AF292D5BCEEA00B33034 /* BarView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A4A9502F2D33260100C2C668 /* LocalNotifications */ = {
@@ -391,6 +415,14 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		A4D6341F2D5D0FCD00E33B4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4D634202D5D0FDD00E33B4C /* ChartData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A4E118582B87A9790008E2AB = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +484,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A443C6DD2D5AA40700B5E145 /* Charts */,
 				A443C6D02D558C8400B5E145 /* Onboarding */,
 				A484DA9D2D36F76E00CA274F /* Animations */,
 				A4A9502F2D33260100C2C668 /* LocalNotifications */,
@@ -599,6 +632,7 @@
 				A484DAA42D3717E700CA274F /* TransformationsView.swift in Sources */,
 				A4F86ADC2BC445F1001B5AF0 /* PlacesNavigationBarView.swift in Sources */,
 				A4D25FB92BD2E4A200278358 /* LocationView.swift in Sources */,
+				A4D634212D5D0FDD00E33B4C /* ChartData.swift in Sources */,
 				A4314D672BA9E99B008969CE /* MenuView.swift in Sources */,
 				A4FA0D402BB720360084AD1A /* Persistence.swift in Sources */,
 				A4FA0D1D2BB7153D0084AD1A /* ContactCellView.swift in Sources */,
@@ -621,7 +655,9 @@
 				A4213D992C0E1E9800C719DE /* LoginView.swift in Sources */,
 				A484DA9C2D35740B00CA274F /* HelloNotificationsView.swift in Sources */,
 				A4D25FB72BD2E47700278358 /* MapView.swift in Sources */,
+				A4A7AF2A2D5BCEEA00B33034 /* BarView.swift in Sources */,
 				A4E118672B87A9790008E2AB /* ContentView.swift in Sources */,
+				A443C6DF2D5AA41D00B5E145 /* ChartsView.swift in Sources */,
 				A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */,
 				A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */,
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,

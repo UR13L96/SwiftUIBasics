@@ -14,10 +14,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         FirebaseApp.configure()
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().setBadgeCount(0)
+        setupNotifications()
         
         return true
+    }
+    
+    private func setupNotifications() {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().setBadgeCount(0)
     }
 }
 
