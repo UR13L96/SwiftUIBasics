@@ -10,6 +10,7 @@ import SwiftUI
 struct BarView: View {
     var value: Double = 15
     var title: String = ""
+    @State private var bar = 0
     
     var body: some View {
         VStack {
@@ -19,11 +20,14 @@ struct BarView: View {
                     .foregroundStyle(Color.gray)
                 
                 Capsule()
-                    .frame(width: 50, height: CGFloat(value))
+                    .frame(width: 50, height: CGFloat(bar))
+                    .animation(.default, value: bar)
                     .foregroundStyle(Color.white)
             }
             
             Text(title)
+        }.onAppear {
+            bar = Int(value) + bar
         }
     }
 }
