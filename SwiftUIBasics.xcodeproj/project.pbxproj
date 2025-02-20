@@ -65,6 +65,8 @@
 		A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E118682B87A97A0008E2AB /* Assets.xcassets */; };
 		A4E1186C2B87A97A0008E2AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */; };
 		A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */; };
+		A4E668602D664F0800E5AD70 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6685F2D664F0800E5AD70 /* CircularProgressBarView.swift */; };
+		A4E668632D665F9400E5AD70 /* CircularBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E668622D665F9400E5AD70 /* CircularBarView.swift */; };
 		A4E8AF362BF3BD9900054C61 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8AF352BF3BD9900054C61 /* Pet.swift */; };
 		A4E91D552BE92E2F0072C7F1 /* PersonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */; };
 		A4F2562D2B9236A200DC8791 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2562C2B9236A200DC8791 /* Song.swift */; };
@@ -142,6 +144,8 @@
 		A4E118682B87A97A0008E2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E1186B2B87A97A0008E2AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4E6685F2D664F0800E5AD70 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		A4E668622D665F9400E5AD70 /* CircularBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBarView.swift; sourceTree = "<group>"; };
 		A4E8AF352BF3BD9900054C61 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormView.swift; sourceTree = "<group>"; };
 		A4F2562C2B9236A200DC8791 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -471,6 +475,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A4E6685E2D664EF100E5AD70 /* CircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4E668612D665F6400E5AD70 /* Components */,
+				A4E6685F2D664F0800E5AD70 /* CircularProgressBarView.swift */,
+			);
+			path = CircularProgressBar;
+			sourceTree = "<group>";
+		};
+		A4E668612D665F6400E5AD70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A4E668622D665F9400E5AD70 /* CircularBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A4E91D562BE9311C0072C7F1 /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +505,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4E6685E2D664EF100E5AD70 /* CircularProgressBar */,
 				A443C6DD2D5AA40700B5E145 /* Charts */,
 				A443C6D02D558C8400B5E145 /* Onboarding */,
 				A484DA9D2D36F76E00CA274F /* Animations */,
@@ -678,6 +700,8 @@
 				A47F9DA72BDFFA1D0057398D /* CoordinatesViewController.swift in Sources */,
 				A47F9DA52BDFF7430057398D /* MapViewController.swift in Sources */,
 				A4D25FB52BD2E42B00278358 /* MapMenuView.swift in Sources */,
+				A4E668602D664F0800E5AD70 /* CircularProgressBarView.swift in Sources */,
+				A4E668632D665F9400E5AD70 /* CircularBarView.swift in Sources */,
 				A4A8627A2C0F6FBD003196DB /* LoginResponse.swift in Sources */,
 				A4A950332D33262F00C2C668 /* LocalNotificationsView.swift in Sources */,
 				A4BFDE6B2C29CED2001840B3 /* FirebaseLoginView.swift in Sources */,
