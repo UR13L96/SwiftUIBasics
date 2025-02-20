@@ -1,3 +1,4 @@
 Pods/
 *.xcworkspace
 SwiftUIBasics/GoogleService-Info.plist
+SwiftUIBasics/Assets/Music/*.wav

@@ -25,7 +25,8 @@ struct MenuView: View {
         Topic(name: "Animations"),
         Topic(name: "Onboarding"),
         Topic(name: "Charts"),
-        Topic(name: "Circular Progress Bar")
+        Topic(name: "Circular Progress Bar"),
+        Topic(name: "Audio Player")
     ]
     
     private func readDarkMode() {
@@ -86,6 +87,8 @@ struct MenuView: View {
             ChartsView()
         case 12:
             CircularProgressBarView()
+        case 13:
+            AudioPlayerView()
         default:
             ContentView().environmentObject(RandomNumber())
         }

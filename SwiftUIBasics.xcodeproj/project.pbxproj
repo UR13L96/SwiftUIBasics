@@ -67,6 +67,10 @@
 		A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */; };
 		A4E668602D664F0800E5AD70 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6685F2D664F0800E5AD70 /* CircularProgressBarView.swift */; };
 		A4E668632D665F9400E5AD70 /* CircularBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E668622D665F9400E5AD70 /* CircularBarView.swift */; };
+		A4E668682D6784EB00E5AD70 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E668672D6784EB00E5AD70 /* AudioPlayerView.swift */; };
+		A4E6686D2D6787CD00E5AD70 /* song3.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4E6686C2D6787CD00E5AD70 /* song3.wav */; };
+		A4E6686E2D6787CD00E5AD70 /* song1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4E6686A2D6787CD00E5AD70 /* song1.wav */; };
+		A4E6686F2D6787CD00E5AD70 /* song2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4E6686B2D6787CD00E5AD70 /* song2.wav */; };
 		A4E8AF362BF3BD9900054C61 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E8AF352BF3BD9900054C61 /* Pet.swift */; };
 		A4E91D552BE92E2F0072C7F1 /* PersonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */; };
 		A4F2562D2B9236A200DC8791 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F2562C2B9236A200DC8791 /* Song.swift */; };
@@ -146,6 +150,10 @@
 		A4E49DFD2C25DE5D00A0536F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4E6685F2D664F0800E5AD70 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		A4E668622D665F9400E5AD70 /* CircularBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBarView.swift; sourceTree = "<group>"; };
+		A4E668672D6784EB00E5AD70 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
+		A4E6686A2D6787CD00E5AD70 /* song1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = song1.wav; sourceTree = "<group>"; };
+		A4E6686B2D6787CD00E5AD70 /* song2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = song2.wav; sourceTree = "<group>"; };
+		A4E6686C2D6787CD00E5AD70 /* song3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = song3.wav; sourceTree = "<group>"; };
 		A4E8AF352BF3BD9900054C61 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		A4E91D542BE92E2F0072C7F1 /* PersonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormView.swift; sourceTree = "<group>"; };
 		A4F2562C2B9236A200DC8791 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -360,6 +368,7 @@
 		A4A950342D344CAA00C2C668 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A4E668692D6787C500E5AD70 /* Music */,
 				A4A950352D344CC100C2C668 /* cat.jpeg */,
 				A4E118682B87A97A0008E2AB /* Assets.xcassets */,
 			);
@@ -492,6 +501,24 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		A4E668642D6784C500E5AD70 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A4E668672D6784EB00E5AD70 /* AudioPlayerView.swift */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		A4E668692D6787C500E5AD70 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6686A2D6787CD00E5AD70 /* song1.wav */,
+				A4E6686B2D6787CD00E5AD70 /* song2.wav */,
+				A4E6686C2D6787CD00E5AD70 /* song3.wav */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		A4E91D562BE9311C0072C7F1 /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +532,7 @@
 		A4F86AD12BC44494001B5AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4E668642D6784C500E5AD70 /* AudioPlayer */,
 				A4E6685E2D664EF100E5AD70 /* CircularProgressBar */,
 				A443C6DD2D5AA40700B5E145 /* Charts */,
 				A443C6D02D558C8400B5E145 /* Onboarding */,
@@ -597,6 +625,9 @@
 				A4A950362D344CC100C2C668 /* cat.jpeg in Resources */,
 				A4E49DFE2C25DE5D00A0536F /* GoogleService-Info.plist in Resources */,
 				A4E118692B87A97A0008E2AB /* Assets.xcassets in Resources */,
+				A4E6686D2D6787CD00E5AD70 /* song3.wav in Resources */,
+				A4E6686E2D6787CD00E5AD70 /* song1.wav in Resources */,
+				A4E6686F2D6787CD00E5AD70 /* song2.wav in Resources */,
 				A47F9DA22BDFF6FF0057398D /* Maps.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +713,7 @@
 				A443C6DF2D5AA41D00B5E145 /* ChartsView.swift in Sources */,
 				A4D25FBB2BD2E51200278358 /* UIKitMapView.swift in Sources */,
 				A4F86AD62BC4454F001B5AF0 /* Place.swift in Sources */,
+				A4E668682D6784EB00E5AD70 /* AudioPlayerView.swift in Sources */,
 				A48157DD2C06304A00FCB379 /* NetworkManager.swift in Sources */,
 				A4F86ADE2BC44890001B5AF0 /* PlacesHomeView.swift in Sources */,
 				A443C6D72D5591D600B5E145 /* OnboardingTwo.swift in Sources */,
