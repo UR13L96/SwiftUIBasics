@@ -10,6 +10,7 @@ import AVKit
 
 struct AudioPlayerView: View {
     @State private var audioPlayer: AVAudioPlayer?
+    @State private var isPlaying = false
     
     var body: some View {
         ZStack {
@@ -31,16 +32,14 @@ struct AudioPlayerView: View {
                     .modifier(MultimediaButton())
                     
                     Button {
-                        audioPlayer?.play()
+                        isPlaying.toggle()
+                        if isPlaying {
+                            audioPlayer?.play()
+                        } else {
+                            audioPlayer?.pause()
+                        }
                     } label: {
-                        Image(systemName: "play.fill")
-                    }
-                    .modifier(MultimediaButton())
-                    
-                    Button {
-                        audioPlayer?.pause()
-                    } label: {
-                        Image(systemName: "pause.fill")
+                        Image(systemName: isPlaying ? "pause.fill" : "play.fill")
                     }
                     .modifier(MultimediaButton())
                     
