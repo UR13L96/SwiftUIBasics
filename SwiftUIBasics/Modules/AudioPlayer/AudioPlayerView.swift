@@ -20,6 +20,7 @@ struct AudioPlayerView: View {
     @State private var albums = ["album1", "album2", "album3"]
     @State private var album = ""
     @State private var currentSong = 0
+    @State private var progress: CGFloat = 0
     
     func goForwardSong() {
         audioPlayer?.stop()
@@ -52,6 +53,11 @@ struct AudioPlayerView: View {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: song))
                 audioPlayer?.prepareToPlay()
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [
+                    .mixWithOthers,
+                    .allowAirPlay
+                ])
+                try AVAudioSession.sharedInstance().setActive(true)
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -71,6 +77,32 @@ struct AudioPlayerView: View {
                     .foregroundStyle(Color.white)
                     .font(.largeTitle)
                     .bold()
+                
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.black)
+                        .opacity(0.5)
+                        .frame(width: 320, height: 8)
+                    
+                    Capsule()
+                        .fill(Color.white)
+                        .frame(width: progress, height: 8)
+                        .gesture(DragGesture()
+                            .onChanged({ value in
+                                if value.location.x >= 0 && value.location.x <= 320 {
+                                    self.progress = value.location.x
+                                }
+                            }).onEnded({ value in
+                                let x = value.location.x
+                                let screen = UIScreen.main.bounds.width - 32
+                                let percentage = x / screen
+                                
+                                if let  audioPlayer = audioPlayer {
+                                    audioPlayer.currentTime = Double(percentage) * audioPlayer.duration
+                                }
+                            })
+                        )
+                }
                 
                 HStack {
                     Button {
@@ -108,6 +140,14 @@ struct AudioPlayerView: View {
             
             title = songs[currentSong]
             album = albums[currentSong]
+            
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                if let audioPlayer = audioPlayer, audioPlayer.isPlaying {
+                    let screen = UIScreen.main.bounds.width - 32
+                    let value = audioPlayer.currentTime / audioPlayer.duration
+                    progress = screen * CGFloat(value)
+                }
+            }
         }
     }
 }

@@ -129,6 +129,7 @@
 		A484DAA32D3717E700CA274F /* TransformationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsView.swift; sourceTree = "<group>"; };
 		A484DAA52D37180B00CA274F /* TransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionsView.swift; sourceTree = "<group>"; };
 		A49139602BAB363900C7D701 /* DarkModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeView.swift; sourceTree = "<group>"; };
+		A49B8C3A2D6E2641003C21E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A4A7AF292D5BCEEA00B33034 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		A4A862792C0F6FBD003196DB /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A4A950322D33262F00C2C668 /* LocalNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsView.swift; sourceTree = "<group>"; };
@@ -457,6 +458,7 @@
 		A4E118632B87A9790008E2AB /* SwiftUIBasics */ = {
 			isa = PBXGroup;
 			children = (
+				A49B8C3A2D6E2641003C21E1 /* Info.plist */,
 				A4A950342D344CAA00C2C668 /* Assets */,
 				A47493BA2C25E28700CF9281 /* SupportingFiles */,
 				A4F86AD12BC44494001B5AF0 /* Modules */,
@@ -885,6 +887,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIBasics/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Usaremos la ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -918,6 +921,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIBasics/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Usaremos la ubicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
