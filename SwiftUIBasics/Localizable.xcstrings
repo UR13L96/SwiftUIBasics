@@ -1,0 +1,257 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ person" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Add contact" : {
+
+    },
+    "ADD SONGS" : {
+
+    },
+    "Age" : {
+
+    },
+    "ALERT" : {
+
+    },
+    "Animate" : {
+
+    },
+    "Authenticated" : {
+
+    },
+    "Bar chart" : {
+
+    },
+    "Basic animations" : {
+
+    },
+    "Camera" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Change mode" : {
+
+    },
+    "Circular chart" : {
+
+    },
+    "Click here" : {
+
+    },
+    "Close" : {
+
+    },
+    "Confirm" : {
+
+    },
+    "Contacts" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Counter view" : {
+
+    },
+    "Dark mode" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Edit contact" : {
+
+    },
+    "Email" : {
+
+    },
+    "Favoritos" : {
+
+    },
+    "Gallery" : {
+
+    },
+    "Go to counter view" : {
+
+    },
+    "Go to Login" : {
+
+    },
+    "Hello, World from notification action!" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Holywood" : {
+
+    },
+    "Home" : {
+
+    },
+    "I prefer to give you a personalized greeting" : {
+
+    },
+    "iOS 13 App Development" : {
+
+    },
+    "Last Name" : {
+
+    },
+    "Load image" : {
+
+    },
+    "Login" : {
+
+    },
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet nunc diam. Curabitur fermentum vestibulum viverra. Praesent tincidunt augue a ipsum eleifend ultricies. Nam nec fringilla erat, nec auctor ligula. Fusce et eleifend libero. Morbi dapibus felis eu ante dictum, suscipit tincidunt quam elementum. Cras elit nunc, auctor vel sollicitudin at, volutpat eget eros. Suspendisse vulputate, ante ac ornare iaculis, ante nibh efficitur libero, at dignissim erat eros vitae risus. Integer vulputate eget enim ut ultricies. Pellentesque lorem nisl, porta quis sem in, ornare pretium felis. Aliquam erat volutpat." : {
+
+    },
+    "Main view" : {
+
+    },
+    "Menu" : {
+
+    },
+    "Modal window" : {
+
+    },
+    "More information" : {
+
+    },
+    "Name" : {
+
+    },
+    "Notification" : {
+
+    },
+    "Password" : {
+
+    },
+    "Phone" : {
+
+    },
+    "Post" : {
+
+    },
+    "Refresh" : {
+
+    },
+    "RESTART" : {
+
+    },
+    "Rotate" : {
+
+    },
+    "Salir" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save image" : {
+
+    },
+    "Save person" : {
+
+    },
+    "Save pet" : {
+
+    },
+    "See more" : {
+
+    },
+    "Select an option" : {
+
+    },
+    "Show" : {
+
+    },
+    "Show pets" : {
+
+    },
+    "Sign Up" : {
+
+    },
+    "START" : {
+
+    },
+    "Step 1" : {
+
+    },
+    "Step 1 description" : {
+
+    },
+    "Step 2" : {
+
+    },
+    "STOP" : {
+
+    },
+    "title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to my app"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenido a mi app"
+          }
+        }
+      }
+    },
+    "Title" : {
+
+    },
+    "Transformations" : {
+
+    },
+    "Transitions" : {
+
+    },
+    "Type" : {
+
+    },
+    "Unauthenticated" : {
+
+    },
+    "Update" : {
+
+    },
+    "User Defaults" : {
+
+    },
+    "Welcome" : {
+
+    },
+    "Welcome to the course %@" : {
+
+    },
+    "You are in the best finance app" : {
+
+    },
+    "You're almost done!" : {
+
+    }
+  },
+  "version" : "1.0"
+}
