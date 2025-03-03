@@ -38,6 +38,8 @@ struct TranslationView: View {
                 }
                 
                 Text("\(date)")
+                
+                Image("greeting")
             }
         }
     }
