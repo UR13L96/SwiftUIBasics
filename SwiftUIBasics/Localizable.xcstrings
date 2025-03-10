@@ -172,6 +172,9 @@
     "Save pet" : {
 
     },
+    "Scan" : {
+
+    },
     "See more" : {
 
     },
@@ -200,6 +203,9 @@
 
     },
     "STOP" : {
+
+    },
+    "Text recognition" : {
 
     },
     "title" : {
