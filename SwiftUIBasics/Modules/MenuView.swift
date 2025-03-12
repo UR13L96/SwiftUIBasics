@@ -28,7 +28,8 @@ struct MenuView: View {
         Topic(name: "Circular Progress Bar"),
         Topic(name: "Audio Player"),
         Topic(name: "Translation"),
-        Topic(name: "Vision Text")
+        Topic(name: "Vision Text"),
+        Topic(name: "Vision Images")
     ]
     
     private func readDarkMode() {
@@ -95,6 +96,8 @@ struct MenuView: View {
             TranslationView()
         case 15:
             VisionTextView()
+        case 16:
+            VisionImagesView()
         default:
             ContentView().environmentObject(RandomNumber())
         }
