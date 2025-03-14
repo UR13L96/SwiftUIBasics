@@ -41,7 +41,10 @@ struct VisionImageDetailView: View {
                 let modelML = try VNCoreMLModel(for: MLModel(contentsOf: ImageClassifier.urlOfModelInThisBundle))
                 let classification = VNCoreMLRequest(model: modelML) { request, error in
                     if let result = request.results as? [VNClassificationObservation] {
-                        self.result = result.first?.identifier ?? "No result"
+                        print(result.first?.confidence ?? 0)
+                        self.result = result.first?.confidence ?? 0 > 0.8
+                            ? result.first?.identifier ?? "No result"
+                            : "No result"
                     }
                 }
                 

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct VisionImagesView: View {
     let models = [
-        VisionModel(name: "car")
+        VisionModel(name: "car1"),
+        VisionModel(name: "car2"),
+        VisionModel(name: "person1")
     ]
     
     var body: some View {
